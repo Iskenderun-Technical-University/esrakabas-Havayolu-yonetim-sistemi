@@ -9,6 +9,7 @@ using System.Data.Sql;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
+using System.Security.Policy;
 
 namespace havayolu_yonetim_sistemi
 {
@@ -27,6 +28,28 @@ namespace havayolu_yonetim_sistemi
 
         private void button1_Click(object sender, EventArgs e)
         {
+
+            con.Open();
+            cmd.Connection = con;
+            //veritani üzerinde sorgulama kodu
+
+            cmd.CommandText = "select * from kullanici";
+
+
+            // kullanici tablodan veri okumak için kodu
+            SqlDataReader rd = cmd.ExecuteReader();
+            if(rd.Read())
+            {
+                if (textBox1.Text.Equals(rd["kullaniciad"].ToString() ) &&  textBox2.Text.Equals(rd["sifre"].ToString()))
+                {
+                    MessageBox.Show(" başarıyla giriş yaptınız");
+
+                }
+                else
+                {
+                    MessageBox.Show("kullanıcı adı veya sifre hatalı !!!");
+                }
+            }
 
         }
     }

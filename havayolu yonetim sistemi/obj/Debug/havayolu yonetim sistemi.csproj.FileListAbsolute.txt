@@ -10,3 +10,15 @@ C:\Users\AFAK\Desktop\مجلد جديد\havayolu yonetim sistemi\obj\Debug\havay
 C:\Users\AFAK\Desktop\مجلد جديد\havayolu yonetim sistemi\obj\Debug\havayolu yonetim sistemi.pdb
 C:\Users\AFAK\Desktop\مجلد جديد\havayolu yonetim sistemi\obj\Debug\havayolu_yonetim_sistemi.baslangic.resources
 C:\Users\AFAK\Desktop\مجلد جديد\havayolu yonetim sistemi\obj\Debug\havayolu_yonetim_sistemi.giris.resources
+C:\Users\AFAK\Desktop\مجلد جديد\esrakabas-Havayolu-yonetim-sistemi\havayolu yonetim sistemi\obj\Debug\havayolu yonetim sistemi.csproj.AssemblyReference.cache
+C:\Users\AFAK\Desktop\مجلد جديد\esrakabas-Havayolu-yonetim-sistemi\havayolu yonetim sistemi\obj\Debug\havayolu yonetim sistemi.csproj.SuggestedBindingRedirects.cache
+C:\Users\AFAK\Desktop\مجلد جديد\esrakabas-Havayolu-yonetim-sistemi\havayolu yonetim sistemi\obj\Debug\havayolu_yonetim_sistemi.baslangic.resources
+C:\Users\AFAK\Desktop\مجلد جديد\esrakabas-Havayolu-yonetim-sistemi\havayolu yonetim sistemi\obj\Debug\havayolu_yonetim_sistemi.giris.resources
+C:\Users\AFAK\Desktop\مجلد جديد\esrakabas-Havayolu-yonetim-sistemi\havayolu yonetim sistemi\obj\Debug\havayolu_yonetim_sistemi.Properties.Resources.resources
+C:\Users\AFAK\Desktop\مجلد جديد\esrakabas-Havayolu-yonetim-sistemi\havayolu yonetim sistemi\obj\Debug\havayolu yonetim sistemi.csproj.GenerateResource.cache
+C:\Users\AFAK\Desktop\مجلد جديد\esrakabas-Havayolu-yonetim-sistemi\havayolu yonetim sistemi\obj\Debug\havayolu yonetim sistemi.csproj.CoreCompileInputs.cache
+C:\Users\AFAK\Desktop\مجلد جديد\esrakabas-Havayolu-yonetim-sistemi\havayolu yonetim sistemi\obj\Debug\havayolu yonetim sistemi.exe
+C:\Users\AFAK\Desktop\مجلد جديد\esrakabas-Havayolu-yonetim-sistemi\havayolu yonetim sistemi\obj\Debug\havayolu yonetim sistemi.pdb
+C:\Users\AFAK\Desktop\مجلد جديد\esrakabas-Havayolu-yonetim-sistemi\havayolu yonetim sistemi\bin\Debug\havayolu yonetim sistemi.exe.config
+C:\Users\AFAK\Desktop\مجلد جديد\esrakabas-Havayolu-yonetim-sistemi\havayolu yonetim sistemi\bin\Debug\havayolu yonetim sistemi.exe
+C:\Users\AFAK\Desktop\مجلد جديد\esrakabas-Havayolu-yonetim-sistemi\havayolu yonetim sistemi\bin\Debug\havayolu yonetim sistemi.pdb
