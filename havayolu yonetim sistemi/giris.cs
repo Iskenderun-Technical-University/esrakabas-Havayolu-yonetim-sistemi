@@ -52,5 +52,24 @@ namespace havayolu_yonetim_sistemi
             }
 
         }
+
+        private void checkBox1_CheckedChanged(object sender, EventArgs e)
+        {
+            if (checkBox1.CheckState == CheckState.Checked )
+            {
+                textBox2.UseSystemPasswordChar = true;
+                checkBox1.Text = "Gizle";
+            }
+            else if(checkBox1.CheckState == CheckState.Unchecked)
+            {
+                textBox2.UseSystemPasswordChar = false;
+                checkBox1.Text = "Göster";
+            }
+        }
+
+        private void textBox2_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
