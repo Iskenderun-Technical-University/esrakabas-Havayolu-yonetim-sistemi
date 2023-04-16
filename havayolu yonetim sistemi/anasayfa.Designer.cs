@@ -53,6 +53,7 @@
             this.label3.TabIndex = 4;
             this.label3.Text = "ŞAFAKJET";
             this.label3.UseCompatibleTextRendering = true;
+            this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // panel2
             // 
@@ -62,6 +63,7 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(740, 22);
             this.panel2.TabIndex = 22;
+            this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
             // 
             // panel1
             // 
@@ -72,6 +74,7 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(740, 87);
             this.panel1.TabIndex = 20;
+            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
             // button1
             // 
@@ -84,6 +87,7 @@
             this.button1.TabIndex = 23;
             this.button1.Text = "iptal et";
             this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // button2
             // 
@@ -96,6 +100,7 @@
             this.button2.TabIndex = 24;
             this.button2.Text = "Biletler";
             this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // button3
             // 
@@ -108,6 +113,7 @@
             this.button3.TabIndex = 25;
             this.button3.Text = "Yolcular";
             this.button3.UseVisualStyleBackColor = false;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // button4
             // 
@@ -120,6 +126,7 @@
             this.button4.TabIndex = 26;
             this.button4.Text = "Uçuşlar";
             this.button4.UseVisualStyleBackColor = false;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // pictureBox1
             // 
@@ -130,6 +137,7 @@
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 27;
             this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // label1
             // 
@@ -141,6 +149,7 @@
             this.label1.Size = new System.Drawing.Size(373, 37);
             this.label1.TabIndex = 28;
             this.label1.Text = "Profesyonal Hizmet Kalitesi";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // anasayfa
             // 
@@ -157,6 +166,7 @@
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "anasayfa";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "anasayfa";
             this.Load += new System.EventHandler(this.anasayfa_Load);
             this.panel1.ResumeLayout(false);
