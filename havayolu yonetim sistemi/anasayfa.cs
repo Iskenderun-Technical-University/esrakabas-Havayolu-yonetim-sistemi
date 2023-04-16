@@ -46,7 +46,7 @@ namespace havayolu_yonetim_sistemi
         {
             uçuşlar uc = new uçuşlar();
             uc.Show();
-            uc.Hide();
+            this.Hide();
         }
 
         private void label3_Click(object sender, EventArgs e)

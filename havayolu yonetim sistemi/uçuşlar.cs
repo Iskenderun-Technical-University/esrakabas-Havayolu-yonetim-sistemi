@@ -21,5 +21,12 @@ namespace havayolu_yonetim_sistemi
         {
 
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            uçuşları_göster ucş = new uçuşları_göster();
+            ucş.Show();
+            this.Hide();
+        }
     }
 }

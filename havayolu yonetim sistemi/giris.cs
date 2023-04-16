@@ -52,6 +52,8 @@ namespace havayolu_yonetim_sistemi
             }
             anasayfa an = new anasayfa();
             an.Show();
+            this.Hide();
+
             con.Close();
         }
 

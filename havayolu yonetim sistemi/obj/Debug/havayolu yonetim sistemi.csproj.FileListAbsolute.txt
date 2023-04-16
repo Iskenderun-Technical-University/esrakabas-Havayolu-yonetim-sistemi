@@ -35,3 +35,5 @@ C:\Users\AFAK\Desktop\esrakabas-Havayolu-yonetim-sistemi\havayolu yonetim sistem
 C:\Users\AFAK\Desktop\esrakabas-Havayolu-yonetim-sistemi\havayolu yonetim sistemi\bin\Debug\havayolu yonetim sistemi.exe
 C:\Users\AFAK\Desktop\esrakabas-Havayolu-yonetim-sistemi\havayolu yonetim sistemi\bin\Debug\havayolu yonetim sistemi.pdb
 C:\Users\AFAK\Desktop\esrakabas-Havayolu-yonetim-sistemi\havayolu yonetim sistemi\obj\Debug\havayolu_yonetim_sistemi.anasayfa.resources
+C:\Users\AFAK\Desktop\esrakabas-Havayolu-yonetim-sistemi\havayolu yonetim sistemi\obj\Debug\havayolu_yonetim_sistemi.uçuşlar.resources
+C:\Users\AFAK\Desktop\esrakabas-Havayolu-yonetim-sistemi\havayolu yonetim sistemi\obj\Debug\havayolu_yonetim_sistemi.uçuşları_göster.resources

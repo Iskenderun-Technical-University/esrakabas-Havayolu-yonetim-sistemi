@@ -72,6 +72,12 @@
     <Compile Include="uçuşlar.Designer.cs">
       <DependentUpon>uçuşlar.cs</DependentUpon>
     </Compile>
+    <Compile Include="uçuşları göster.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="uçuşları göster.Designer.cs">
+      <DependentUpon>uçuşları göster.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="anasayfa.resx">
       <DependentUpon>anasayfa.cs</DependentUpon>
     </EmbeddedResource>
@@ -92,6 +98,9 @@
     </Compile>
     <EmbeddedResource Include="uçuşlar.resx">
       <DependentUpon>uçuşlar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="uçuşları göster.resx">
+      <DependentUpon>uçuşları göster.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

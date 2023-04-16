@@ -101,7 +101,7 @@
             this.button4.BackColor = System.Drawing.Color.Wheat;
             this.button4.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.button4.Location = new System.Drawing.Point(426, 481);
+            this.button4.Location = new System.Drawing.Point(447, 481);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(97, 36);
             this.button4.TabIndex = 34;
@@ -113,7 +113,7 @@
             this.button3.BackColor = System.Drawing.Color.Wheat;
             this.button3.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.button3.Location = new System.Drawing.Point(314, 481);
+            this.button3.Location = new System.Drawing.Point(331, 481);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(97, 36);
             this.button3.TabIndex = 33;
@@ -249,10 +249,11 @@
             this.button2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.button2.Location = new System.Drawing.Point(508, 390);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(109, 36);
+            this.button2.Size = new System.Drawing.Size(136, 36);
             this.button2.TabIndex = 49;
-            this.button2.Text = "Uçuş Göster";
+            this.button2.Text = "Uçuşları Göster";
             this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // uçuşlar
             // 
