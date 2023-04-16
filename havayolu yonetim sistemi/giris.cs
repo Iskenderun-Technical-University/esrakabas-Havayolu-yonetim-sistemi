@@ -28,9 +28,9 @@ namespace havayolu_yonetim_sistemi
 
         private void button1_Click(object sender, EventArgs e)
         {
+                    con.Open();
 
-            con.Open();
-            cmd.Connection = con;
+                    cmd.Connection = con;
             //veritani üzerinde sorgulama kodu
 
             cmd.CommandText = "select * from kullanici";
@@ -50,7 +50,9 @@ namespace havayolu_yonetim_sistemi
                     MessageBox.Show("kullanıcı adı veya sifre hatalı !!!");
                 }
             }
-
+            anasayfa an = new anasayfa();
+            an.Show();
+            con.Close();
         }
 
         private void checkBox1_CheckedChanged(object sender, EventArgs e)
