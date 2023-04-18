@@ -70,5 +70,13 @@ namespace havayolu_yonetim_sistemi
         {
 
         }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            ukodu.Text = " ";
+            comboBox1.SelectedItem = " ";
+            comboBox2.SelectedItem = " ";
+            kolsay.Text = " ";
+        }
     }
 }
