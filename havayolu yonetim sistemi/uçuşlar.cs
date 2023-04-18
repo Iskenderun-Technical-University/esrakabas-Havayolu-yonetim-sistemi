@@ -78,5 +78,12 @@ namespace havayolu_yonetim_sistemi
             comboBox2.SelectedItem = " ";
             kolsay.Text = " ";
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            anasayfa ana = new anasayfa();
+            ana.Show();
+            this.Hide();
+        }
     }
 }
