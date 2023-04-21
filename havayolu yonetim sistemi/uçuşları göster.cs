@@ -64,5 +64,14 @@ namespace havayolu_yonetim_sistemi
             ucu.Show();
             this.Hide();
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            textBox1.Text = " ";
+            textBox2.Text = " ";
+            comboBox1.SelectedItem = " ";
+            comboBox2.SelectedItem = " ";
+
+        }
     }
 }
