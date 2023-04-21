@@ -56,7 +56,7 @@
             this.button2.BackColor = System.Drawing.Color.Wheat;
             this.button2.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.button2.Location = new System.Drawing.Point(634, 431);
+            this.button2.Location = new System.Drawing.Point(521, 431);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(85, 36);
             this.button2.TabIndex = 67;
@@ -68,12 +68,13 @@
             this.button1.BackColor = System.Drawing.Color.Wheat;
             this.button1.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.button1.Location = new System.Drawing.Point(520, 431);
+            this.button1.Location = new System.Drawing.Point(612, 431);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(97, 36);
             this.button1.TabIndex = 66;
             this.button1.Text = "Önceki";
             this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // dateTimePicker1
             // 
@@ -198,6 +199,7 @@
             this.button3.TabIndex = 52;
             this.button3.Text = "Güncelle";
             this.button3.UseVisualStyleBackColor = false;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // label3
             // 
