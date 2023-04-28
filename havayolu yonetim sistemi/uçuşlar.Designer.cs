@@ -201,8 +201,12 @@
             // 
             this.comboBox1.FormattingEnabled = true;
             this.comboBox1.Items.AddRange(new object[] {
-            "suudi arabistan",
-            "mısır"});
+            "suudiarabistan",
+            "mısır",
+            "almanya ",
+            "ispanya",
+            "finlanda",
+            "isviçre"});
             this.comboBox1.Location = new System.Drawing.Point(196, 250);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(189, 21);
@@ -213,7 +217,13 @@
             this.comboBox2.FormattingEnabled = true;
             this.comboBox2.Items.AddRange(new object[] {
             "türkiye",
-            "amerika"});
+            "amerika",
+            "suudiarabistan",
+            "mısır",
+            "almanya ",
+            "ispanya",
+            "finlanda",
+            "isviçre"});
             this.comboBox2.Location = new System.Drawing.Point(196, 312);
             this.comboBox2.Name = "comboBox2";
             this.comboBox2.Size = new System.Drawing.Size(189, 21);

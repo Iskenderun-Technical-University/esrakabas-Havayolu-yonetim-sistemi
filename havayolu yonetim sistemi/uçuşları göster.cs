@@ -57,7 +57,28 @@ namespace havayolu_yonetim_sistemi
 
         private void button3_Click(object sender, EventArgs e)
         {
-            
+            if (textBox2.Text==" "|| textBox1.Text==" "|| comboBox1.Text== " "|| comboBox2.Text==" ")
+            {
+                MessageBox.Show(" kaybolan veri!!!");
+            }
+            else
+            {
+                try
+                {
+                    con.Open();
+                    String Query = "update uçuşlar set nereden='" + comboBox1.SelectedItem.ToString() + "',nereye='" + comboBox2.SelectedItem.ToString() + "',tarihbelirle='" + dateTimePicker1.Value.Date.ToString() + "',koltuksayisi='" + textBox1.Text + "'where ucuskodu ='" + textBox2.Text + "';";
+                    SqlCommand cmd = new SqlCommand(Query, con);
+                    cmd.ExecuteNonQuery();
+                    MessageBox.Show("başarıyla güncellendi");
+
+                    con.Close();
+                    ucuslar();
+                }catch(Exception Ex)
+                {
+                    MessageBox.Show(Ex.Message);
+                }
+
+            }
         }
 
         private void button1_Click(object sender, EventArgs e)
