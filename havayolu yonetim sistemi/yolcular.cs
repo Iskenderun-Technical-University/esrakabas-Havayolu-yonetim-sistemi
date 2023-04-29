@@ -16,5 +16,25 @@ namespace havayolu_yonetim_sistemi
         {
             InitializeComponent();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            //önceki sayfayı gösterme kodu
+
+            uçuşları_göster ug = new uçuşları_göster();
+            ug.Show();
+            this.Hide();
+
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            kimlikno.Text = " ";
+            yolcuadı.Text = " ";
+            pasaportno.Text = " ";
+            uyruk.Text = " ";
+            cinsiyet.Text = " ";
+            telno.Text = " ";
+        }
     }
 }

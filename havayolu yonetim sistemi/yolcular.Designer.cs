@@ -32,8 +32,8 @@
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
-            this.ukodu = new System.Windows.Forms.TextBox();
-            this.kolsay = new System.Windows.Forms.TextBox();
+            this.kimlikno = new System.Windows.Forms.TextBox();
+            this.telno = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
@@ -45,11 +45,11 @@
             this.label5 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.pasaportno = new System.Windows.Forms.TextBox();
+            this.yolcuadı = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.uyruk = new System.Windows.Forms.ComboBox();
+            this.cinsiyet = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -77,6 +77,7 @@
             this.button1.TabIndex = 66;
             this.button1.Text = "Önceki";
             this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // label4
             // 
@@ -90,23 +91,23 @@
             this.label4.Text = "Uyruk";
             this.label4.UseMnemonic = false;
             // 
-            // ukodu
+            // kimlikno
             // 
-            this.ukodu.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ukodu.Location = new System.Drawing.Point(184, 154);
-            this.ukodu.Multiline = true;
-            this.ukodu.Name = "ukodu";
-            this.ukodu.Size = new System.Drawing.Size(189, 27);
-            this.ukodu.TabIndex = 61;
+            this.kimlikno.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.kimlikno.Location = new System.Drawing.Point(184, 154);
+            this.kimlikno.Multiline = true;
+            this.kimlikno.Name = "kimlikno";
+            this.kimlikno.Size = new System.Drawing.Size(189, 27);
+            this.kimlikno.TabIndex = 61;
             // 
-            // kolsay
+            // telno
             // 
-            this.kolsay.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.kolsay.Location = new System.Drawing.Point(184, 402);
-            this.kolsay.Multiline = true;
-            this.kolsay.Name = "kolsay";
-            this.kolsay.Size = new System.Drawing.Size(189, 27);
-            this.kolsay.TabIndex = 60;
+            this.telno.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.telno.Location = new System.Drawing.Point(184, 402);
+            this.telno.Multiline = true;
+            this.telno.Name = "telno";
+            this.telno.Size = new System.Drawing.Size(189, 27);
+            this.telno.TabIndex = 60;
             // 
             // label7
             // 
@@ -154,6 +155,7 @@
             this.button4.TabIndex = 53;
             this.button4.Text = "Sıfırla";
             this.button4.UseVisualStyleBackColor = false;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // button3
             // 
@@ -232,23 +234,23 @@
             this.panel1.Size = new System.Drawing.Size(743, 93);
             this.panel1.TabIndex = 50;
             // 
-            // textBox1
+            // pasaportno
             // 
-            this.textBox1.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(184, 250);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(189, 27);
-            this.textBox1.TabIndex = 68;
+            this.pasaportno.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.pasaportno.Location = new System.Drawing.Point(184, 250);
+            this.pasaportno.Multiline = true;
+            this.pasaportno.Name = "pasaportno";
+            this.pasaportno.Size = new System.Drawing.Size(189, 27);
+            this.pasaportno.TabIndex = 68;
             // 
-            // textBox2
+            // yolcuadı
             // 
-            this.textBox2.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.Location = new System.Drawing.Point(184, 202);
-            this.textBox2.Multiline = true;
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(189, 27);
-            this.textBox2.TabIndex = 69;
+            this.yolcuadı.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.yolcuadı.Location = new System.Drawing.Point(184, 202);
+            this.yolcuadı.Multiline = true;
+            this.yolcuadı.Name = "yolcuadı";
+            this.yolcuadı.Size = new System.Drawing.Size(189, 27);
+            this.yolcuadı.TabIndex = 69;
             // 
             // label8
             // 
@@ -262,10 +264,10 @@
             this.label8.Text = "Telefoın Numarası";
             this.label8.UseMnemonic = false;
             // 
-            // comboBox1
+            // uyruk
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
+            this.uyruk.FormattingEnabled = true;
+            this.uyruk.Items.AddRange(new object[] {
             "türkiye",
             "amerika",
             "suudiarabistan",
@@ -274,37 +276,37 @@
             "ispanya",
             "finlanda",
             "isviçre"});
-            this.comboBox1.Location = new System.Drawing.Point(184, 308);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(189, 21);
-            this.comboBox1.TabIndex = 71;
+            this.uyruk.Location = new System.Drawing.Point(184, 308);
+            this.uyruk.Name = "uyruk";
+            this.uyruk.Size = new System.Drawing.Size(189, 21);
+            this.uyruk.TabIndex = 71;
             // 
-            // comboBox2
+            // cinsiyet
             // 
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Items.AddRange(new object[] {
+            this.cinsiyet.FormattingEnabled = true;
+            this.cinsiyet.Items.AddRange(new object[] {
             "Erkek",
             "Kadin"});
-            this.comboBox2.Location = new System.Drawing.Point(184, 357);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(189, 21);
-            this.comboBox2.TabIndex = 72;
+            this.cinsiyet.Location = new System.Drawing.Point(184, 357);
+            this.cinsiyet.Name = "cinsiyet";
+            this.cinsiyet.Size = new System.Drawing.Size(189, 21);
+            this.cinsiyet.TabIndex = 72;
             // 
             // yolcular
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(742, 542);
-            this.Controls.Add(this.comboBox2);
-            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.cinsiyet);
+            this.Controls.Add(this.uyruk);
             this.Controls.Add(this.label8);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.yolcuadı);
+            this.Controls.Add(this.pasaportno);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.ukodu);
-            this.Controls.Add(this.kolsay);
+            this.Controls.Add(this.kimlikno);
+            this.Controls.Add(this.telno);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
@@ -331,8 +333,8 @@
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox ukodu;
-        private System.Windows.Forms.TextBox kolsay;
+        private System.Windows.Forms.TextBox kimlikno;
+        private System.Windows.Forms.TextBox telno;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
@@ -344,10 +346,10 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox pasaportno;
+        private System.Windows.Forms.TextBox yolcuadı;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.ComboBox comboBox2;
+        private System.Windows.Forms.ComboBox uyruk;
+        private System.Windows.Forms.ComboBox cinsiyet;
     }
 }
