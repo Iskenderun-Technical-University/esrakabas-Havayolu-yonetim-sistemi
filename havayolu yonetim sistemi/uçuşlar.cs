@@ -38,6 +38,7 @@ namespace havayolu_yonetim_sistemi
 
         private void button3_Click(object sender, EventArgs e)
         {
+            //kaydet botunu kodlamasi
 
             if (ukodu.Text == " " || comboBox1.Text == " " || comboBox2.Text == " " || dateTimePicker1.Text == " "||kolsay.Text=="")
             {
