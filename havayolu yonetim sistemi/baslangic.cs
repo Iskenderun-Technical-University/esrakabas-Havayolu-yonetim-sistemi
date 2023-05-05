@@ -44,5 +44,21 @@ namespace havayolu_yonetim_sistemi
                 this.Hide();
             }
         }
+
+        public giris giris
+        {
+            get => default;
+            set
+            {
+            }
+        }
+
+        public int Property
+        {
+            get => default;
+            set
+            {
+            }
+        }
     }
 }

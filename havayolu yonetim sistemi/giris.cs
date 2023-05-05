@@ -26,6 +26,14 @@ namespace havayolu_yonetim_sistemi
             con.ConnectionString = @"Data Source=DESKTOP-MDN807P;Initial Catalog=havayolu;Integrated Security=True";
         }
 
+        public anasayfa anasayfa
+        {
+            get => default;
+            set
+            {
+            }
+        }
+
         private void button1_Click(object sender, EventArgs e)
         {
                     con.Open();
