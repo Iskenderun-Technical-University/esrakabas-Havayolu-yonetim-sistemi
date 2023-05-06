@@ -43,15 +43,18 @@ Genel tablo
 
 Alt tablolar
 
-![vo](https://user-images.githubusercontent.com/115526819/236587404-976e16cc-86cc-478b-85ca-5fabcf12dbb4.png)
 
-![to](https://user-images.githubusercontent.com/115526819/236587413-7adb0b67-ee02-4699-a71e-c599e1996d92.png)
+![bilettbl](https://user-images.githubusercontent.com/115526819/236588003-f9c840d2-54b3-4717-95be-749171ba4460.png)
 
-![foto](https://user-images.githubusercontent.com/115526819/236587637-a315232e-98a2-4863-b6a6-6a022cc30b79.png)
+![iptaltbl](https://user-images.githubusercontent.com/115526819/236588013-7c931a89-4568-4857-89c3-fc278d9dfd59.png)
+
+![yolcutb](https://user-images.githubusercontent.com/115526819/236588022-3f02764d-27c4-4c3c-ab55-5be6fd0f01e4.png)
+
+![uçuş](https://user-images.githubusercontent.com/115526819/236588041-ee88ed89-edb0-4618-abef-519bd748bacc.png)
+
+![kullancı](https://user-images.githubusercontent.com/115526819/236588048-f55dbfcf-7ae9-404f-9305-2e8227e09298.png)
 
 
-![4](https://user-images.githubusercontent.com/115526819/236587439-453713cf-325a-4f0e-95c0-8d6bf6bf4016.png)
 
-![5](https://user-images.githubusercontent.com/115526819/236587467-80156a0e-b938-4141-ab8c-8dd724f09ef9.png)
 
 
