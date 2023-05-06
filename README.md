@@ -8,15 +8,37 @@
   ikinci motivasyonumu ,c# ve SQL konularda kendimi geliştirmek ve yeni öğrendiğimiz bilgiler pekiştirmek için bu proje yaptım.
 
 ► Özllikler :
+
+
 -Bu projede   uçuşlar,yolcular ve bilet işlemleri kontrol edilir.
+
 -c# dilinde yazıldı.
+
 -'Anasayafa' formunu dört ana bölümünden oluşur(uçuşlar,yolcular,bilet alma ve bilet iptalı)
+
 -Aşağdaki işlemler yapabilecek :
+
 ⇀Uçuşlarin ve yolcuların bilgileri kaydedilebilecek ve üzerinde silme ve güncelleme işlemleri gerçekleşebilecek.
+
 ⇀Biletlerin (alma,iptal)işlemleri gerçekleşebilecek.
+
 ⇀kulanıcının çıkış ve varış şehrin adını ,tarihin belirlemesin,pasaportun numarasını vb. yazması gerekir.
+
 -Bu sistemin tasarımı basit böylece kullanıcı üzerinde çalışırken herhangi bir zorluk yaşamaz
+
 -kulanıcının dikatini çeker.
+
 - Kullanıcının kullanımına uygundur.
+
 -Bu Projede Veri Tabanı olarak SQL Kullanıldı.
+
+
+► Tabiolar 
+
+Genel tablo
+
+
+
+![foto](https://user-images.githubusercontent.com/115526819/236587227-4c939ca7-0cc9-4885-8ea7-c1aa42df36e7.png)
+
 
