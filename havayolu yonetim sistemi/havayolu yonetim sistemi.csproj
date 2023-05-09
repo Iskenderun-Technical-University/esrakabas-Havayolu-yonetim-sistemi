@@ -58,6 +58,12 @@
     <Compile Include="baslangic.Designer.cs">
       <DependentUpon>baslangic.cs</DependentUpon>
     </Compile>
+    <Compile Include="Biletler.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Biletler.Designer.cs">
+      <DependentUpon>Biletler.cs</DependentUpon>
+    </Compile>
     <Compile Include="giris.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -95,6 +101,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="baslangic.resx">
       <DependentUpon>baslangic.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Biletler.resx">
+      <DependentUpon>Biletler.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="giris.resx">
       <DependentUpon>giris.cs</DependentUpon>
