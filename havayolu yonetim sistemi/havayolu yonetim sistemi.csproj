@@ -84,6 +84,12 @@
     <Compile Include="yolcular.Designer.cs">
       <DependentUpon>yolcular.cs</DependentUpon>
     </Compile>
+    <Compile Include="yolculargoster.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="yolculargoster.Designer.cs">
+      <DependentUpon>yolculargoster.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="anasayfa.resx">
       <DependentUpon>anasayfa.cs</DependentUpon>
     </EmbeddedResource>
@@ -110,6 +116,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="yolcular.resx">
       <DependentUpon>yolcular.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="yolculargoster.resx">
+      <DependentUpon>yolculargoster.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="ClassDiagram2.cd" />
     <None Include="Properties\Settings.settings">

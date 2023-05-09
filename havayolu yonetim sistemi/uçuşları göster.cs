@@ -46,7 +46,7 @@ namespace havayolu_yonetim_sistemi
             comboBox1.SelectedItem = dataGridView1.SelectedRows[0].Cells[1].Value.ToString();
             comboBox2.SelectedItem = dataGridView1.SelectedRows[0].Cells[2].Value.ToString(); 
             
-            textBox1.Text = dataGridView1.SelectedRows[0].Cells[4].Value.ToString();
+            textBox1.Text = dataGridView1.SelectedRows[0].Cells[3].Value.ToString();
             
         }
 

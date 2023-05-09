@@ -38,3 +38,4 @@ C:\Users\AFAK\Desktop\esrakabas-Havayolu-yonetim-sistemi\havayolu yonetim sistem
 C:\Users\AFAK\Desktop\esrakabas-Havayolu-yonetim-sistemi\havayolu yonetim sistemi\obj\Debug\havayolu_yonetim_sistemi.uçuşlar.resources
 C:\Users\AFAK\Desktop\esrakabas-Havayolu-yonetim-sistemi\havayolu yonetim sistemi\obj\Debug\havayolu_yonetim_sistemi.uçuşları_göster.resources
 C:\Users\AFAK\Desktop\esrakabas-Havayolu-yonetim-sistemi\havayolu yonetim sistemi\obj\Debug\havayolu_yonetim_sistemi.yolcular.resources
+C:\Users\AFAK\Desktop\esrakabas-Havayolu-yonetim-sistemi\havayolu yonetim sistemi\obj\Debug\havayolu_yonetim_sistemi.yolculargoster.resources
