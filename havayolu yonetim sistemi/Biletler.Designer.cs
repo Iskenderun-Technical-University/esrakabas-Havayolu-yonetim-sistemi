@@ -380,6 +380,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Biletler";
             this.Text = "Biletler";
+            this.Load += new System.EventHandler(this.Biletler_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
