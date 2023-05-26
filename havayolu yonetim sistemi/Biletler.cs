@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Data.SqlClient;
+using System.Data.SqlTypes;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -38,6 +39,23 @@ namespace havayolu_yonetim_sistemi
             con.Close();
 
         }
+
+
+        private void uçuşdoldur()
+        {
+            con.Open();
+            SqlCommand cmd = new SqlCommand("select ucuskodu from uçuşlar", con);
+            SqlDataReader rdr;
+            rdr = cmd.ExecuteReader();
+            DataTable dt = new DataTable();
+            dt.Columns.Add("ucuskodu", typeof(string));
+            dt.Load(rdr);
+            uçuşnu.ValueMember = "ucuskodu";
+            uçuşnu.DataSource = dt;
+            con.Close();
+
+        }
+
         private void yolcugotur()
         {
 
@@ -75,6 +93,7 @@ namespace havayolu_yonetim_sistemi
         private void Biletler_Load(object sender, EventArgs e)
         {
             yolcudoldur();
+            uçuşdoldur();
             
         }
 
@@ -91,6 +110,18 @@ namespace havayolu_yonetim_sistemi
         private void yolcutc_SelectionChangeCommitted(object sender, EventArgs e)
         {
             yolcugotur();
+        }
+
+        private void label5_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            yolculargoster gos = new yolculargoster();
+            gos.Show();
+            this.Hide();
         }
     }
 }

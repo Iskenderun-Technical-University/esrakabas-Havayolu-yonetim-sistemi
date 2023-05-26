@@ -123,6 +123,7 @@
             this.button1.TabIndex = 107;
             this.button1.Text = "Önceki";
             this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // label4
             // 
@@ -256,6 +257,7 @@
             this.label5.TabIndex = 101;
             this.label5.Text = "Uçuş Numarası";
             this.label5.UseMnemonic = false;
+            this.label5.Click += new System.EventHandler(this.label5_Click);
             // 
             // panel1
             // 
