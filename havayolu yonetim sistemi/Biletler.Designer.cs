@@ -48,10 +48,10 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.label9 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
-            this.uyruk = new System.Windows.Forms.ComboBox();
             this.label11 = new System.Windows.Forms.Label();
             this.bağaj = new System.Windows.Forms.TextBox();
-            this.yolcuad = new System.Windows.Forms.ComboBox();
+            this.yolcuad = new System.Windows.Forms.TextBox();
+            this.yolcuuyruk = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -85,7 +85,7 @@
             this.dataGridView1.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.GridColor = System.Drawing.Color.Peru;
-            this.dataGridView1.Location = new System.Drawing.Point(44, 311);
+            this.dataGridView1.Location = new System.Drawing.Point(30, 311);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders;
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
@@ -98,7 +98,7 @@
             this.uçuşnu.Items.AddRange(new object[] {
             "Erkek",
             "Kadin"});
-            this.uçuşnu.Location = new System.Drawing.Point(585, 130);
+            this.uçuşnu.Location = new System.Drawing.Point(585, 132);
             this.uçuşnu.Name = "uçuşnu";
             this.uçuşnu.Size = new System.Drawing.Size(189, 21);
             this.uçuşnu.TabIndex = 112;
@@ -106,7 +106,7 @@
             // biletno
             // 
             this.biletno.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.biletno.Location = new System.Drawing.Point(148, 130);
+            this.biletno.Location = new System.Drawing.Point(197, 124);
             this.biletno.Multiline = true;
             this.biletno.Name = "biletno";
             this.biletno.Size = new System.Drawing.Size(189, 27);
@@ -128,7 +128,7 @@
             // 
             this.label4.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.label4.Location = new System.Drawing.Point(12, 215);
+            this.label4.Location = new System.Drawing.Point(427, 255);
             this.label4.Name = "label4";
             this.label4.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.label4.Size = new System.Drawing.Size(93, 29);
@@ -148,25 +148,28 @@
             "ispanya",
             "finlanda",
             "isviçre"});
-            this.yolcutc.Location = new System.Drawing.Point(585, 175);
+            this.yolcutc.Location = new System.Drawing.Point(197, 171);
             this.yolcutc.Name = "yolcutc";
             this.yolcutc.Size = new System.Drawing.Size(189, 21);
             this.yolcutc.TabIndex = 111;
-            this.yolcutc.SelectedIndexChanged += new System.EventHandler(this.uyruk_SelectedIndexChanged);
+            this.yolcutc.SelectedIndexChanged += new System.EventHandler(this.yolcutc_SelectedIndexChanged);
+            this.yolcutc.SelectionChangeCommitted += new System.EventHandler(this.yolcutc_SelectionChangeCommitted);
             // 
             // pasaportno
             // 
+            this.pasaportno.Enabled = false;
             this.pasaportno.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.pasaportno.Location = new System.Drawing.Point(585, 209);
+            this.pasaportno.Location = new System.Drawing.Point(584, 171);
             this.pasaportno.Multiline = true;
             this.pasaportno.Name = "pasaportno";
+            this.pasaportno.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.pasaportno.Size = new System.Drawing.Size(189, 27);
             this.pasaportno.TabIndex = 105;
             // 
             // yas
             // 
             this.yas.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.yas.Location = new System.Drawing.Point(148, 215);
+            this.yas.Location = new System.Drawing.Point(585, 259);
             this.yas.Multiline = true;
             this.yas.Name = "yas";
             this.yas.Size = new System.Drawing.Size(189, 27);
@@ -176,7 +179,7 @@
             // 
             this.label7.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.label7.Location = new System.Drawing.Point(388, 167);
+            this.label7.Location = new System.Drawing.Point(-4, 171);
             this.label7.Name = "label7";
             this.label7.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.label7.Size = new System.Drawing.Size(179, 29);
@@ -234,7 +237,7 @@
             // 
             this.label6.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.label6.Location = new System.Drawing.Point(388, 207);
+            this.label6.Location = new System.Drawing.Point(427, 171);
             this.label6.Name = "label6";
             this.label6.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.label6.Size = new System.Drawing.Size(151, 29);
@@ -246,7 +249,7 @@
             // 
             this.label5.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.label5.Location = new System.Drawing.Point(388, 132);
+            this.label5.Location = new System.Drawing.Point(427, 130);
             this.label5.Name = "label5";
             this.label5.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.label5.Size = new System.Drawing.Size(130, 29);
@@ -268,7 +271,7 @@
             // 
             this.label9.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.label9.Location = new System.Drawing.Point(12, 173);
+            this.label9.Location = new System.Drawing.Point(12, 207);
             this.label9.Name = "label9";
             this.label9.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.label9.Size = new System.Drawing.Size(117, 29);
@@ -288,39 +291,23 @@
             this.label10.Text = "uyruk";
             this.label10.UseMnemonic = false;
             // 
-            // uyruk
-            // 
-            this.uyruk.FormattingEnabled = true;
-            this.uyruk.Items.AddRange(new object[] {
-            "türkiye",
-            "amerika",
-            "suudiarabistan",
-            "mısır",
-            "almanya ",
-            "ispanya",
-            "finlanda",
-            "isviçre"});
-            this.uyruk.Location = new System.Drawing.Point(148, 259);
-            this.uyruk.Name = "uyruk";
-            this.uyruk.Size = new System.Drawing.Size(189, 21);
-            this.uyruk.TabIndex = 117;
-            // 
             // label11
             // 
             this.label11.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label11.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.label11.Location = new System.Drawing.Point(388, 249);
+            this.label11.Location = new System.Drawing.Point(427, 215);
             this.label11.Name = "label11";
             this.label11.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.label11.Size = new System.Drawing.Size(138, 29);
             this.label11.TabIndex = 119;
             this.label11.Text = "Bağaj";
             this.label11.UseMnemonic = false;
+            this.label11.Click += new System.EventHandler(this.label11_Click);
             // 
             // bağaj
             // 
             this.bağaj.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bağaj.Location = new System.Drawing.Point(589, 251);
+            this.bağaj.Location = new System.Drawing.Point(585, 215);
             this.bağaj.Multiline = true;
             this.bağaj.Name = "bağaj";
             this.bağaj.Size = new System.Drawing.Size(189, 27);
@@ -328,30 +315,35 @@
             // 
             // yolcuad
             // 
-            this.yolcuad.FormattingEnabled = true;
-            this.yolcuad.Items.AddRange(new object[] {
-            "türkiye",
-            "amerika",
-            "suudiarabistan",
-            "mısır",
-            "almanya ",
-            "ispanya",
-            "finlanda",
-            "isviçre"});
-            this.yolcuad.Location = new System.Drawing.Point(148, 181);
+            this.yolcuad.Enabled = false;
+            this.yolcuad.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.yolcuad.Location = new System.Drawing.Point(197, 209);
+            this.yolcuad.Multiline = true;
             this.yolcuad.Name = "yolcuad";
-            this.yolcuad.Size = new System.Drawing.Size(189, 21);
+            this.yolcuad.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.yolcuad.Size = new System.Drawing.Size(189, 27);
             this.yolcuad.TabIndex = 121;
+            // 
+            // yolcuuyruk
+            // 
+            this.yolcuuyruk.Enabled = false;
+            this.yolcuuyruk.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.yolcuuyruk.Location = new System.Drawing.Point(197, 257);
+            this.yolcuuyruk.Multiline = true;
+            this.yolcuuyruk.Name = "yolcuuyruk";
+            this.yolcuuyruk.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.yolcuuyruk.Size = new System.Drawing.Size(189, 27);
+            this.yolcuuyruk.TabIndex = 122;
             // 
             // Biletler
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(790, 538);
+            this.Controls.Add(this.yolcuuyruk);
             this.Controls.Add(this.yolcuad);
             this.Controls.Add(this.bağaj);
             this.Controls.Add(this.label11);
-            this.Controls.Add(this.uyruk);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.button2);
@@ -373,6 +365,7 @@
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Biletler";
+            this.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.Text = "Biletler";
             this.Load += new System.EventHandler(this.Biletler_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
@@ -404,9 +397,9 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.ComboBox uyruk;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.TextBox bağaj;
-        private System.Windows.Forms.ComboBox yolcuad;
+        private System.Windows.Forms.TextBox yolcuad;
+        private System.Windows.Forms.TextBox yolcuuyruk;
     }
 }

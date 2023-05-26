@@ -33,8 +33,31 @@ namespace havayolu_yonetim_sistemi
             DataTable dt = new DataTable();
             dt.Columns.Add("kimlikno", typeof(int));
             dt.Load(rdr);
-            yolcuad.ValueMember = "kimlikno";
-            yolcuad.DataSource = dt;
+            yolcutc.ValueMember = "kimlikno";
+            yolcutc.DataSource = dt;
+            con.Close();
+
+        }
+        private void yolcugotur()
+        {
+
+            con.Open();
+            String Query = "select * from yolcutable where kimlikno = '"+yolcutc.SelectedValue.ToString()+"'";
+            SqlCommand cmd = new SqlCommand(Query, con);
+            DataTable dt = new DataTable();
+            SqlDataAdapter da = new SqlDataAdapter(cmd);
+
+            da.Fill(dt);
+            
+            foreach (DataRow dr  in dt.Rows)
+            {
+              
+                yolcuad.Text = dr["yolcuad"].ToString();
+                pasaportno.Text = dr["pasaportno"].ToString();
+                yolcuuyruk.Text = dr["uyruk"].ToString();
+                
+            }
+            
             con.Close();
 
         }
@@ -49,14 +72,25 @@ namespace havayolu_yonetim_sistemi
 
         }
 
-        private void uyruk_SelectedIndexChanged(object sender, EventArgs e)
+        private void Biletler_Load(object sender, EventArgs e)
+        {
+            yolcudoldur();
+            
+        }
+
+        private void label11_Click(object sender, EventArgs e)
         {
 
         }
 
-        private void Biletler_Load(object sender, EventArgs e)
+        private void yolcutc_SelectedIndexChanged(object sender, EventArgs e)
         {
-            yolcudoldur();
+            
+        }
+
+        private void yolcutc_SelectionChangeCommitted(object sender, EventArgs e)
+        {
+            yolcugotur();
         }
     }
 }

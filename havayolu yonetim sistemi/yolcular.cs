@@ -88,5 +88,10 @@ namespace havayolu_yonetim_sistemi
         {
 
         }
+
+        private void yolcular_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

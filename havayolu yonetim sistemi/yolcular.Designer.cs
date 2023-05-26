@@ -324,6 +324,7 @@
             this.Name = "yolcular";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Telefon Numarası";
+            this.Load += new System.EventHandler(this.yolcular_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
