@@ -21,6 +21,22 @@ namespace havayolu_yonetim_sistemi
         {
             InitializeComponent();
             con.ConnectionString = @"Data Source=DESKTOP-MDN807P;Initial Catalog=havayolu;Integrated Security=True";
+
+        }
+
+        private void yolcudoldur()
+        {
+            con.Open();
+            SqlCommand cmd = new SqlCommand("select kimlikno from yolcutable", con);
+            SqlDataReader rdr;
+            rdr = cmd.ExecuteReader();
+            DataTable dt = new DataTable();
+            dt.Columns.Add("kimlikno", typeof(int));
+            dt.Load(rdr);
+            yolcuad.ValueMember = "kimlikno";
+            yolcuad.DataSource = dt;
+            con.Close();
+
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -40,7 +56,7 @@ namespace havayolu_yonetim_sistemi
 
         private void Biletler_Load(object sender, EventArgs e)
         {
-
+            yolcudoldur();
         }
     }
 }

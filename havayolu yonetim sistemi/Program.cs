@@ -16,7 +16,7 @@ namespace havayolu_yonetim_sistemi
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new yolcular());
+            Application.Run(new Biletler());
         }
     }
 }

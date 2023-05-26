@@ -31,18 +31,16 @@
             this.label3 = new System.Windows.Forms.Label();
             this.button2 = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.cinsiyet = new System.Windows.Forms.ComboBox();
-            this.yolcuadı = new System.Windows.Forms.TextBox();
-            this.pasaportno = new System.Windows.Forms.TextBox();
+            this.uçuşnu = new System.Windows.Forms.ComboBox();
+            this.biletno = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
-            this.uyruk = new System.Windows.Forms.ComboBox();
-            this.kimlikno = new System.Windows.Forms.TextBox();
-            this.telno = new System.Windows.Forms.TextBox();
+            this.yolcutc = new System.Windows.Forms.ComboBox();
+            this.pasaportno = new System.Windows.Forms.TextBox();
+            this.yas = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.button4 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label6 = new System.Windows.Forms.Label();
@@ -50,9 +48,10 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.label9 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.uyruk = new System.Windows.Forms.ComboBox();
             this.label11 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.bağaj = new System.Windows.Forms.TextBox();
+            this.yolcuad = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -74,7 +73,7 @@
             this.button2.BackColor = System.Drawing.Color.Wheat;
             this.button2.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.button2.Location = new System.Drawing.Point(631, 399);
+            this.button2.Location = new System.Drawing.Point(631, 428);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(97, 36);
             this.button2.TabIndex = 114;
@@ -93,34 +92,25 @@
             this.dataGridView1.Size = new System.Drawing.Size(548, 208);
             this.dataGridView1.TabIndex = 113;
             // 
-            // cinsiyet
+            // uçuşnu
             // 
-            this.cinsiyet.FormattingEnabled = true;
-            this.cinsiyet.Items.AddRange(new object[] {
+            this.uçuşnu.FormattingEnabled = true;
+            this.uçuşnu.Items.AddRange(new object[] {
             "Erkek",
             "Kadin"});
-            this.cinsiyet.Location = new System.Drawing.Point(585, 130);
-            this.cinsiyet.Name = "cinsiyet";
-            this.cinsiyet.Size = new System.Drawing.Size(189, 21);
-            this.cinsiyet.TabIndex = 112;
+            this.uçuşnu.Location = new System.Drawing.Point(585, 130);
+            this.uçuşnu.Name = "uçuşnu";
+            this.uçuşnu.Size = new System.Drawing.Size(189, 21);
+            this.uçuşnu.TabIndex = 112;
             // 
-            // yolcuadı
+            // biletno
             // 
-            this.yolcuadı.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.yolcuadı.Location = new System.Drawing.Point(585, 167);
-            this.yolcuadı.Multiline = true;
-            this.yolcuadı.Name = "yolcuadı";
-            this.yolcuadı.Size = new System.Drawing.Size(189, 27);
-            this.yolcuadı.TabIndex = 109;
-            // 
-            // pasaportno
-            // 
-            this.pasaportno.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.pasaportno.Location = new System.Drawing.Point(135, 173);
-            this.pasaportno.Multiline = true;
-            this.pasaportno.Name = "pasaportno";
-            this.pasaportno.Size = new System.Drawing.Size(189, 27);
-            this.pasaportno.TabIndex = 108;
+            this.biletno.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.biletno.Location = new System.Drawing.Point(148, 130);
+            this.biletno.Multiline = true;
+            this.biletno.Name = "biletno";
+            this.biletno.Size = new System.Drawing.Size(189, 27);
+            this.biletno.TabIndex = 109;
             // 
             // button1
             // 
@@ -146,10 +136,10 @@
             this.label4.Text = "Yaş";
             this.label4.UseMnemonic = false;
             // 
-            // uyruk
+            // yolcutc
             // 
-            this.uyruk.FormattingEnabled = true;
-            this.uyruk.Items.AddRange(new object[] {
+            this.yolcutc.FormattingEnabled = true;
+            this.yolcutc.Items.AddRange(new object[] {
             "türkiye",
             "amerika",
             "suudiarabistan",
@@ -158,35 +148,35 @@
             "ispanya",
             "finlanda",
             "isviçre"});
-            this.uyruk.Location = new System.Drawing.Point(148, 132);
-            this.uyruk.Name = "uyruk";
-            this.uyruk.Size = new System.Drawing.Size(189, 21);
-            this.uyruk.TabIndex = 111;
-            this.uyruk.SelectedIndexChanged += new System.EventHandler(this.uyruk_SelectedIndexChanged);
+            this.yolcutc.Location = new System.Drawing.Point(585, 175);
+            this.yolcutc.Name = "yolcutc";
+            this.yolcutc.Size = new System.Drawing.Size(189, 21);
+            this.yolcutc.TabIndex = 111;
+            this.yolcutc.SelectedIndexChanged += new System.EventHandler(this.uyruk_SelectedIndexChanged);
             // 
-            // kimlikno
+            // pasaportno
             // 
-            this.kimlikno.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.kimlikno.Location = new System.Drawing.Point(585, 209);
-            this.kimlikno.Multiline = true;
-            this.kimlikno.Name = "kimlikno";
-            this.kimlikno.Size = new System.Drawing.Size(189, 27);
-            this.kimlikno.TabIndex = 105;
+            this.pasaportno.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.pasaportno.Location = new System.Drawing.Point(585, 209);
+            this.pasaportno.Multiline = true;
+            this.pasaportno.Name = "pasaportno";
+            this.pasaportno.Size = new System.Drawing.Size(189, 27);
+            this.pasaportno.TabIndex = 105;
             // 
-            // telno
+            // yas
             // 
-            this.telno.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.telno.Location = new System.Drawing.Point(135, 209);
-            this.telno.Multiline = true;
-            this.telno.Name = "telno";
-            this.telno.Size = new System.Drawing.Size(189, 27);
-            this.telno.TabIndex = 104;
+            this.yas.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.yas.Location = new System.Drawing.Point(148, 215);
+            this.yas.Multiline = true;
+            this.yas.Name = "yas";
+            this.yas.Size = new System.Drawing.Size(189, 27);
+            this.yas.TabIndex = 104;
             // 
             // label7
             // 
             this.label7.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.label7.Location = new System.Drawing.Point(400, 215);
+            this.label7.Location = new System.Drawing.Point(388, 167);
             this.label7.Name = "label7";
             this.label7.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.label7.Size = new System.Drawing.Size(179, 29);
@@ -219,28 +209,16 @@
             this.label1.Text = "Bilet Alma";
             this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
-            // button4
-            // 
-            this.button4.BackColor = System.Drawing.Color.Wheat;
-            this.button4.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.button4.Location = new System.Drawing.Point(631, 441);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(97, 36);
-            this.button4.TabIndex = 98;
-            this.button4.Text = "Sıfırla";
-            this.button4.UseVisualStyleBackColor = false;
-            // 
             // button3
             // 
             this.button3.BackColor = System.Drawing.Color.Wheat;
             this.button3.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.button3.Location = new System.Drawing.Point(631, 357);
+            this.button3.Location = new System.Drawing.Point(631, 372);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(97, 36);
             this.button3.TabIndex = 97;
-            this.button3.Text = "Güncelle";
+            this.button3.Text = "Bilet Al";
             this.button3.UseVisualStyleBackColor = false;
             // 
             // panel2
@@ -256,7 +234,7 @@
             // 
             this.label6.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.label6.Location = new System.Drawing.Point(403, 173);
+            this.label6.Location = new System.Drawing.Point(388, 207);
             this.label6.Name = "label6";
             this.label6.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.label6.Size = new System.Drawing.Size(151, 29);
@@ -268,7 +246,7 @@
             // 
             this.label5.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.label5.Location = new System.Drawing.Point(403, 132);
+            this.label5.Location = new System.Drawing.Point(388, 132);
             this.label5.Name = "label5";
             this.label5.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.label5.Size = new System.Drawing.Size(130, 29);
@@ -310,10 +288,10 @@
             this.label10.Text = "uyruk";
             this.label10.UseMnemonic = false;
             // 
-            // comboBox1
+            // uyruk
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
+            this.uyruk.FormattingEnabled = true;
+            this.uyruk.Items.AddRange(new object[] {
             "türkiye",
             "amerika",
             "suudiarabistan",
@@ -322,16 +300,16 @@
             "ispanya",
             "finlanda",
             "isviçre"});
-            this.comboBox1.Location = new System.Drawing.Point(135, 257);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(189, 21);
-            this.comboBox1.TabIndex = 117;
+            this.uyruk.Location = new System.Drawing.Point(148, 259);
+            this.uyruk.Name = "uyruk";
+            this.uyruk.Size = new System.Drawing.Size(189, 21);
+            this.uyruk.TabIndex = 117;
             // 
             // label11
             // 
             this.label11.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label11.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.label11.Location = new System.Drawing.Point(413, 255);
+            this.label11.Location = new System.Drawing.Point(388, 249);
             this.label11.Name = "label11";
             this.label11.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.label11.Size = new System.Drawing.Size(138, 29);
@@ -339,39 +317,55 @@
             this.label11.Text = "Bağaj";
             this.label11.UseMnemonic = false;
             // 
-            // textBox2
+            // bağaj
             // 
-            this.textBox2.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.Location = new System.Drawing.Point(589, 251);
-            this.textBox2.Multiline = true;
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(189, 27);
-            this.textBox2.TabIndex = 120;
+            this.bağaj.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bağaj.Location = new System.Drawing.Point(589, 251);
+            this.bağaj.Multiline = true;
+            this.bağaj.Name = "bağaj";
+            this.bağaj.Size = new System.Drawing.Size(189, 27);
+            this.bağaj.TabIndex = 120;
+            // 
+            // yolcuad
+            // 
+            this.yolcuad.FormattingEnabled = true;
+            this.yolcuad.Items.AddRange(new object[] {
+            "türkiye",
+            "amerika",
+            "suudiarabistan",
+            "mısır",
+            "almanya ",
+            "ispanya",
+            "finlanda",
+            "isviçre"});
+            this.yolcuad.Location = new System.Drawing.Point(148, 181);
+            this.yolcuad.Name = "yolcuad";
+            this.yolcuad.Size = new System.Drawing.Size(189, 21);
+            this.yolcuad.TabIndex = 121;
             // 
             // Biletler
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(790, 538);
-            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.yolcuad);
+            this.Controls.Add(this.bağaj);
             this.Controls.Add(this.label11);
-            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.uyruk);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.dataGridView1);
-            this.Controls.Add(this.cinsiyet);
-            this.Controls.Add(this.yolcuadı);
-            this.Controls.Add(this.pasaportno);
+            this.Controls.Add(this.uçuşnu);
+            this.Controls.Add(this.biletno);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.uyruk);
-            this.Controls.Add(this.kimlikno);
-            this.Controls.Add(this.telno);
+            this.Controls.Add(this.yolcutc);
+            this.Controls.Add(this.pasaportno);
+            this.Controls.Add(this.yas);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.button4);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.label6);
@@ -393,18 +387,16 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.ComboBox cinsiyet;
-        private System.Windows.Forms.TextBox yolcuadı;
-        private System.Windows.Forms.TextBox pasaportno;
+        private System.Windows.Forms.ComboBox uçuşnu;
+        private System.Windows.Forms.TextBox biletno;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.ComboBox uyruk;
-        private System.Windows.Forms.TextBox kimlikno;
-        private System.Windows.Forms.TextBox telno;
+        private System.Windows.Forms.ComboBox yolcutc;
+        private System.Windows.Forms.TextBox pasaportno;
+        private System.Windows.Forms.TextBox yas;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label label6;
@@ -412,8 +404,9 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox uyruk;
         private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox bağaj;
+        private System.Windows.Forms.ComboBox yolcuad;
     }
 }
