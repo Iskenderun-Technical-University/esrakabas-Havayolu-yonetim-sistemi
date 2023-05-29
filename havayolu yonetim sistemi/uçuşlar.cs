@@ -86,5 +86,10 @@ namespace havayolu_yonetim_sistemi
             ana.Show();
             this.Hide();
         }
+
+        private void uçuşlar_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

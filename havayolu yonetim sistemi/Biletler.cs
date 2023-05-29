@@ -9,6 +9,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace havayolu_yonetim_sistemi
 {
@@ -23,6 +24,18 @@ namespace havayolu_yonetim_sistemi
             InitializeComponent();
             con.ConnectionString = @"Data Source=DESKTOP-MDN807P;Initial Catalog=havayolu;Integrated Security=True";
 
+        }
+        private void ucuslar()
+
+        {
+            con.Open();
+            String Query = "select * from  bilettbl ";
+            SqlDataAdapter sda = new SqlDataAdapter(Query, con);
+            SqlCommandBuilder builder = new SqlCommandBuilder(sda);
+            var ds = new DataSet();
+            sda.Fill(ds);
+            biletDGV.DataSource = ds.Tables[0];
+            con.Close();
         }
 
         private void yolcudoldur()
@@ -60,22 +73,22 @@ namespace havayolu_yonetim_sistemi
         {
 
             con.Open();
-            String Query = "select * from yolcutable where kimlikno = '"+yolcutc.SelectedValue.ToString()+"'";
+            String Query = "select * from yolcutable where kimlikno = '" + yolcutc.SelectedValue.ToString() + "'";
             SqlCommand cmd = new SqlCommand(Query, con);
             DataTable dt = new DataTable();
             SqlDataAdapter da = new SqlDataAdapter(cmd);
 
             da.Fill(dt);
-            
-            foreach (DataRow dr  in dt.Rows)
+
+            foreach (DataRow dr in dt.Rows)
             {
-              
+
                 yolcuad.Text = dr["yolcuad"].ToString();
                 pasaportno.Text = dr["pasaportno"].ToString();
                 yolcuuyruk.Text = dr["uyruk"].ToString();
-                
+
             }
-            
+
             con.Close();
 
         }
@@ -94,7 +107,7 @@ namespace havayolu_yonetim_sistemi
         {
             yolcudoldur();
             uçuşdoldur();
-            
+            ucuslar();
         }
 
         private void label11_Click(object sender, EventArgs e)
@@ -104,7 +117,7 @@ namespace havayolu_yonetim_sistemi
 
         private void yolcutc_SelectedIndexChanged(object sender, EventArgs e)
         {
-            
+
         }
 
         private void yolcutc_SelectionChangeCommitted(object sender, EventArgs e)
@@ -122,6 +135,42 @@ namespace havayolu_yonetim_sistemi
             yolculargoster gos = new yolculargoster();
             gos.Show();
             this.Hide();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            biletno.Text = " ";
+            yolcuad.Text = " ";
+            pasaportno.Text = " ";
+            yolcuuyruk.Text = " ";
+            bağaj.Text = " ";
+            yas.Text = " ";
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            if (biletno.Text == " " ||bağaj.Text == "" || yas.Text == " ")
+            {
+                MessageBox.Show("kaybolan veri !!!");
+            }
+            else
+            {
+                try
+                {
+                    con.Open();
+                    String Query = "insert into bilettbl  values('" + biletno.Text + "','" + uçuşnu.SelectedValue.ToString() + "','" + yolcutc.SelectedValue.ToString() + "','" + yolcuad.Text + "','" + pasaportno.Text + "','"   + yolcuuyruk.Text + "','" + yas.Text + "','" + bağaj.Text + "')";
+                    SqlCommand cmd = new SqlCommand(Query, con);
+                    cmd.ExecuteNonQuery();
+                    MessageBox.Show("bilet başarıyla kaydeldi!!");
+                    con.Close();
+                    ucuslar();
+
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
+            }
         }
     }
 }

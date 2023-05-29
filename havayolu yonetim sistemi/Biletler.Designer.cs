@@ -30,7 +30,7 @@
         {
             this.label3 = new System.Windows.Forms.Label();
             this.button2 = new System.Windows.Forms.Button();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.biletDGV = new System.Windows.Forms.DataGridView();
             this.uçuşnu = new System.Windows.Forms.ComboBox();
             this.biletno = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
@@ -52,7 +52,7 @@
             this.bağaj = new System.Windows.Forms.TextBox();
             this.yolcuad = new System.Windows.Forms.TextBox();
             this.yolcuuyruk = new System.Windows.Forms.TextBox();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.biletDGV)).BeginInit();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -79,18 +79,19 @@
             this.button2.TabIndex = 114;
             this.button2.Text = "Sil";
             this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
-            // dataGridView1
+            // biletDGV
             // 
-            this.dataGridView1.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.GridColor = System.Drawing.Color.Peru;
-            this.dataGridView1.Location = new System.Drawing.Point(30, 311);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders;
-            this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView1.Size = new System.Drawing.Size(548, 208);
-            this.dataGridView1.TabIndex = 113;
+            this.biletDGV.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.biletDGV.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.biletDGV.GridColor = System.Drawing.Color.Peru;
+            this.biletDGV.Location = new System.Drawing.Point(30, 311);
+            this.biletDGV.Name = "biletDGV";
+            this.biletDGV.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders;
+            this.biletDGV.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.biletDGV.Size = new System.Drawing.Size(548, 208);
+            this.biletDGV.TabIndex = 113;
             // 
             // uçuşnu
             // 
@@ -224,6 +225,7 @@
             this.button3.TabIndex = 97;
             this.button3.Text = "Bilet Al";
             this.button3.UseVisualStyleBackColor = false;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // panel2
             // 
@@ -349,7 +351,7 @@
             this.Controls.Add(this.label10);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.button2);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.biletDGV);
             this.Controls.Add(this.uçuşnu);
             this.Controls.Add(this.biletno);
             this.Controls.Add(this.button1);
@@ -370,7 +372,7 @@
             this.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.Text = "Biletler";
             this.Load += new System.EventHandler(this.Biletler_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.biletDGV)).EndInit();
             this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -381,7 +383,7 @@
 
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView biletDGV;
         private System.Windows.Forms.ComboBox uçuşnu;
         private System.Windows.Forms.TextBox biletno;
         private System.Windows.Forms.Button button1;
