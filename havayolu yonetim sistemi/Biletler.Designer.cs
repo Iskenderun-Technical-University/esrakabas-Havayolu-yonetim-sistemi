@@ -370,6 +370,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Biletler";
             this.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Biletler";
             this.Load += new System.EventHandler(this.Biletler_Load);
             ((System.ComponentModel.ISupportInitialize)(this.biletDGV)).EndInit();

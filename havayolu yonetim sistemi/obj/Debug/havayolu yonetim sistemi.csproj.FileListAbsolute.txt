@@ -40,3 +40,4 @@ C:\Users\AFAK\Desktop\esrakabas-Havayolu-yonetim-sistemi\havayolu yonetim sistem
 C:\Users\AFAK\Desktop\esrakabas-Havayolu-yonetim-sistemi\havayolu yonetim sistemi\obj\Debug\havayolu_yonetim_sistemi.yolcular.resources
 C:\Users\AFAK\Desktop\esrakabas-Havayolu-yonetim-sistemi\havayolu yonetim sistemi\obj\Debug\havayolu_yonetim_sistemi.yolculargoster.resources
 C:\Users\AFAK\Desktop\esrakabas-Havayolu-yonetim-sistemi\havayolu yonetim sistemi\obj\Debug\havayolu_yonetim_sistemi.Biletler.resources
+C:\Users\AFAK\Desktop\esrakabas-Havayolu-yonetim-sistemi\havayolu yonetim sistemi\obj\Debug\havayolu_yonetim_sistemi.iptal_etme.resources
