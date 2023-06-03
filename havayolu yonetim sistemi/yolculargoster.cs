@@ -35,7 +35,7 @@ namespace havayolu_yonetim_sistemi
             SqlCommandBuilder builder = new SqlCommandBuilder(sda);
             var ds = new DataSet();
             sda.Fill(ds);
-            dataGridView1.DataSource = ds.Tables[0];
+            yolcuka.DataSource = ds.Tables[0];
             con.Close();
         }
 
@@ -47,7 +47,7 @@ namespace havayolu_yonetim_sistemi
 
         private void button3_Click(object sender, EventArgs e)
         {
-            if (kimlikno.Text == " " || yolcuadı.Text == " " || pasaportno.Text == " " || uyruk.SelectedItem.ToString() == " "||cinsiyet.SelectedItem.ToString()== " "||telno.Text==" ")  
+            if (kimlikno.Text == " " || yolcuadı.Text == " " || pasaportno.Text == " " || telno.Text == " ")
             {
                 MessageBox.Show(" kaybolan veri!!!");
             }
@@ -56,7 +56,7 @@ namespace havayolu_yonetim_sistemi
                 try
                 {
                     con.Open();
-                    String Query = "update yolcutable set yolcuad='" + yolcuadı.Text + "',pasaportno='" + pasaportno.Text+ "',uyruk ='" + uyruk.SelectedItem.ToString() + "',cinsiyet ='" + cinsiyet.SelectedItem.ToString() + "',telno ='" + telno.Text + "'where kimlikno ='" + kimlikno.Text + "';";
+                    String Query = "update yolcutable set yolcuad='" + yolcuadı.Text + "',pasaportno='" + pasaportno.Text + "',uyruk ='" + uyruk.SelectedItem.ToString() + "',cinsiyet ='" + cinsiyet.SelectedItem.ToString() + "',telno ='" + telno.Text + "' where kimlikno ='" + kimlikno.Text + "';";
                     SqlCommand cmd = new SqlCommand(Query, con);
                     cmd.ExecuteNonQuery();
                     MessageBox.Show("başarıyla güncellendi");
@@ -75,19 +75,74 @@ namespace havayolu_yonetim_sistemi
         {
             // DGV veritabanina baglama kodu
 
-            kimlikno.Text = dataGridView1.SelectedRows[0].Cells[0].Value.ToString();
-            yolcuadı.Text = dataGridView1.SelectedRows[0].Cells[1].Value.ToString();
-            pasaportno.Text = dataGridView1.SelectedRows[0].Cells[2].Value.ToString();
+            kimlikno.Text = yolcuka.SelectedRows[0].Cells[0].Value.ToString();
+            yolcuadı.Text = yolcuka.SelectedRows[0].Cells[1].Value.ToString();
+            pasaportno.Text = yolcuka.SelectedRows[0].Cells[2].Value.ToString();
 
-            uyruk.SelectedItem = dataGridView1.SelectedRows[0].Cells[3].Value.ToString();
-            cinsiyet.SelectedItem = dataGridView1.SelectedRows[0].Cells[4].Value.ToString();
-            telno.Text = dataGridView1.SelectedRows[0].Cells[5].Value.ToString();
-
+            uyruk.SelectedItem = yolcuka.SelectedRows[0].Cells[3].Value.ToString();
+            cinsiyet.SelectedItem = yolcuka.SelectedRows[0].Cells[4].Value.ToString();
+            telno.Text = yolcuka.SelectedRows[0].Cells[5].Value.ToString();
+            yolcuka.AlternatingRowsDefaultCellStyle.BackColor = Color.Sienna;
+            yolcuka.CellBorderStyle = DataGridViewCellBorderStyle.SingleHorizontal;
         }
 
         private void yolculargoster_Load(object sender, EventArgs e)
         {
             ucuslar();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+
+            if (kimlikno.Text == "")
+            {
+                MessageBox.Show("silmek için kimlik numara girin");
+
+            }
+            else
+            {
+                try
+                {
+                    con.Open();
+                    String Query = "delete from yolcutable where kimlikno ='" + kimlikno.Text + "';";
+                    SqlCommand cmd = new SqlCommand(Query, con);
+                    cmd.ExecuteNonQuery();
+                    MessageBox.Show("yolcu başarıyla silindi !!!");
+
+                    con.Close();
+                    ucuslar();
+                }
+                catch (Exception Ex)
+                {
+                    MessageBox.Show(Ex.Message);
+                }
+            }
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            kimlikno.Text = " ";
+            yolcuadı.Text = " ";
+            pasaportno.Text = " ";
+            uyruk.Text = " ";
+            cinsiyet.Text = " ";
+            telno.Text = " ";
+        }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+            DialogResult secim = new DialogResult();
+            if (MessageBox.Show("çıkış yapmak istediğinizde emin misiniz?", "çıkış", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                Application.Exit();
+            }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            yolcular yolcu = new yolcular();
+            yolcu.Show();
+            this.Hide();
         }
     }
 }

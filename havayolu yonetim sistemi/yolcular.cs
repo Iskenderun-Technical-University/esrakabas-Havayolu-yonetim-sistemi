@@ -30,8 +30,8 @@ namespace havayolu_yonetim_sistemi
         {
             //önceki sayfayı gösterme kodu
 
-            uçuşları_göster ug = new uçuşları_göster();
-            ug.Show();
+            anasayfa an = new anasayfa();
+            an.Show();
             this.Hide();
 
         }
@@ -51,7 +51,7 @@ namespace havayolu_yonetim_sistemi
 
             //kaydet botunu kodlamasi
 
-            if (kimlikno.Text == " " || yolcuadı.Text == " " || pasaportno.Text == " " || uyruk.Text == " " ||cinsiyet.Text==" "|| telno.Text == "")
+            if (kimlikno.Text == " " || yolcuadı.Text == " " || pasaportno.Text == " " || uyruk.Text == " " || cinsiyet.Text == " " || telno.Text == "")
             {
                 MessageBox.Show("kaybolan veri !!!");
             }
@@ -60,7 +60,7 @@ namespace havayolu_yonetim_sistemi
                 try
                 {
                     con.Open();
-                    String Query = "insert into yolcutable  values('" + kimlikno.Text + "','" + yolcuadı.Text + "','" + pasaportno.Text + "','" + uyruk.SelectedItem.ToString() + "','" + cinsiyet.SelectedItem.ToString() + "','"+telno.Text+"')";
+                    String Query = "insert into yolcutable  values('" + kimlikno.Text + "','" + yolcuadı.Text + "','" + pasaportno.Text + "','" + uyruk.SelectedItem.ToString() + "','" + cinsiyet.SelectedItem.ToString() + "','" + telno.Text + "')";
 
                     SqlCommand cmd = new SqlCommand(Query, con);
                     cmd.ExecuteNonQuery();
@@ -92,6 +92,15 @@ namespace havayolu_yonetim_sistemi
         private void yolcular_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+            DialogResult secim = new DialogResult();
+            if (MessageBox.Show("çıkış yapmak istediğinizde emin misiniz?", "çıkış", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                Application.Exit();
+            }
         }
     }
 }

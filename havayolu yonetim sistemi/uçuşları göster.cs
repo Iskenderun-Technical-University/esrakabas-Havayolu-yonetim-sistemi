@@ -30,24 +30,26 @@ namespace havayolu_yonetim_sistemi
         {
             con.Open();
             String Query = "select * from uçuşlar ";
-            SqlDataAdapter sda = new SqlDataAdapter(Query,con);
+            SqlDataAdapter sda = new SqlDataAdapter(Query, con);
             SqlCommandBuilder builder = new SqlCommandBuilder(sda);
             var ds = new DataSet();
             sda.Fill(ds);
-            dataGridView1.DataSource = ds.Tables[0];
+            uçuşka.DataSource = ds.Tables[0];
             con.Close();
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {  
+        {
             // DGV veritabanina baglama kodu
 
-            textBox2.Text = dataGridView1.SelectedRows[0].Cells[0].Value.ToString();
-            comboBox1.SelectedItem = dataGridView1.SelectedRows[0].Cells[1].Value.ToString();
-            comboBox2.SelectedItem = dataGridView1.SelectedRows[0].Cells[2].Value.ToString(); 
-            
-            textBox1.Text = dataGridView1.SelectedRows[0].Cells[3].Value.ToString();
-            
+            ukodu.Text = uçuşka.SelectedRows[0].Cells[0].Value.ToString();
+            nereden.SelectedItem = uçuşka.SelectedRows[0].Cells[1].Value.ToString();
+            nereye.SelectedItem = uçuşka.SelectedRows[0].Cells[2].Value.ToString();
+
+            kolsay.Text = uçuşka.SelectedRows[0].Cells[4].Value.ToString();
+            uçuşka.AlternatingRowsDefaultCellStyle.BackColor = Color.Sienna;
+            uçuşka.CellBorderStyle = DataGridViewCellBorderStyle.SingleHorizontal;
+
         }
 
         private void uçuşları_göster_Load(object sender, EventArgs e)
@@ -57,7 +59,7 @@ namespace havayolu_yonetim_sistemi
 
         private void button3_Click(object sender, EventArgs e)
         {
-            if (textBox2.Text==" "|| textBox1.Text==" "|| comboBox1.Text== " "|| comboBox2.Text==" ")
+            if (ukodu.Text == " " || kolsay.Text == " " )
             {
                 MessageBox.Show(" kaybolan veri!!!");
             }
@@ -66,14 +68,15 @@ namespace havayolu_yonetim_sistemi
                 try
                 {
                     con.Open();
-                    String Query = "update uçuşlar set nereden='" + comboBox1.SelectedItem.ToString() + "',nereye='" + comboBox2.SelectedItem.ToString() + "',tarihbelirle='" + dateTimePicker1.Value.Date.ToString() + "',koltuksayisi='" + textBox1.Text + "'where ucuskodu ='" + textBox2.Text + "';";
+                    String Query = "update uçuşlar set nereden='" + nereden.SelectedItem.ToString() + "',nereye='" + nereye.SelectedItem.ToString() + "',tarihbelirle='" + tarihbelirle.Value.Date.ToString() + "',koltuksayisi='" + kolsay.Text + "' where ucuskodu ='" + ukodu.Text + "';";
                     SqlCommand cmd = new SqlCommand(Query, con);
                     cmd.ExecuteNonQuery();
                     MessageBox.Show("başarıyla güncellendi");
 
                     con.Close();
                     ucuslar();
-                }catch(Exception Ex)
+                }
+                catch (Exception Ex)
                 {
                     MessageBox.Show(Ex.Message);
                 }
@@ -92,10 +95,10 @@ namespace havayolu_yonetim_sistemi
         {
             //sifirlama botunu kodu
 
-            textBox1.Text = " ";
-            textBox2.Text = " ";
-            comboBox1.SelectedItem = " ";
-            comboBox2.SelectedItem = " ";
+            kolsay.Text = " ";
+            ukodu.Text = " ";
+            nereden.Text = " ";
+            nereye.Text = " ";
 
         }
 
@@ -104,7 +107,7 @@ namespace havayolu_yonetim_sistemi
             //sil botunu kodlandi
             //ilk önce veritabanina bagladik ve silme kodu yazıldı
 
-            if (textBox2.Text == "")
+            if (ukodu.Text == "")
             {
                 MessageBox.Show("silmek için uçuş kodu girin");
 
@@ -114,7 +117,7 @@ namespace havayolu_yonetim_sistemi
                 try
                 {
                     con.Open();
-                    String Query = "delete from uçuşlar where ucuskodu ='" + textBox2.Text + "';";
+                    String Query = "delete from uçuşlar where ucuskodu ='" + ukodu.Text + "';";
                     SqlCommand cmd = new SqlCommand(Query, con);
                     cmd.ExecuteNonQuery();
                     MessageBox.Show("uçuş başarıyla silindi !!!");
@@ -127,8 +130,17 @@ namespace havayolu_yonetim_sistemi
                     MessageBox.Show(Ex.Message);
                 }
             }
-        
 
+
+        }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+            DialogResult secim = new DialogResult();
+            if (MessageBox.Show("çıkış yapmak istediğinizde emin misiniz?", "çıkış", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                Application.Exit();
+            }
         }
     }
 }

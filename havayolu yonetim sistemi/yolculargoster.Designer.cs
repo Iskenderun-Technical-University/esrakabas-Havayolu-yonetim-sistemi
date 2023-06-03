@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(yolculargoster));
             this.cinsiyet = new System.Windows.Forms.ComboBox();
             this.label8 = new System.Windows.Forms.Label();
             this.yolcuadı = new System.Windows.Forms.TextBox();
@@ -47,10 +48,13 @@
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.yolcuka = new System.Windows.Forms.DataGridView();
             this.button2 = new System.Windows.Forms.Button();
+            this.label9 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.yolcuka)).BeginInit();
             this.SuspendLayout();
             // 
             // cinsiyet
@@ -99,12 +103,13 @@
             this.button1.BackColor = System.Drawing.Color.Wheat;
             this.button1.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.button1.Location = new System.Drawing.Point(675, 417);
+            this.button1.Location = new System.Drawing.Point(663, 464);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(97, 36);
             this.button1.TabIndex = 86;
             this.button1.Text = "Önceki";
             this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // label4
             // 
@@ -123,9 +128,9 @@
             this.label3.BackColor = System.Drawing.Color.Sienna;
             this.label3.Font = new System.Drawing.Font("Tahoma", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label3.Location = new System.Drawing.Point(266, 43);
+            this.label3.Location = new System.Drawing.Point(296, 50);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(287, 52);
+            this.label3.Size = new System.Drawing.Size(204, 52);
             this.label3.TabIndex = 4;
             this.label3.Text = "ŞAFAKJET";
             this.label3.UseCompatibleTextRendering = true;
@@ -134,10 +139,8 @@
             // 
             this.uyruk.FormattingEnabled = true;
             this.uyruk.Items.AddRange(new object[] {
-            "türkiye",
-            "amerika",
             "suudiarabistan",
-            "mısır",
+            "misir",
             "almanya ",
             "ispanya",
             "finlanda",
@@ -195,7 +198,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Times New Roman", 24F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.label1.Location = new System.Drawing.Point(256, 54);
+            this.label1.Location = new System.Drawing.Point(257, 62);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(230, 37);
             this.label1.TabIndex = 78;
@@ -206,19 +209,20 @@
             this.button4.BackColor = System.Drawing.Color.Wheat;
             this.button4.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.button4.Location = new System.Drawing.Point(562, 417);
+            this.button4.Location = new System.Drawing.Point(554, 464);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(97, 36);
             this.button4.TabIndex = 76;
             this.button4.Text = "Sıfırla";
             this.button4.UseVisualStyleBackColor = false;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // button3
             // 
             this.button3.BackColor = System.Drawing.Color.Wheat;
             this.button3.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.button3.Location = new System.Drawing.Point(324, 417);
+            this.button3.Location = new System.Drawing.Point(324, 464);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(97, 36);
             this.button3.TabIndex = 75;
@@ -230,7 +234,7 @@
             // 
             this.panel2.BackColor = System.Drawing.Color.Sienna;
             this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel2.Location = new System.Drawing.Point(-4, 477);
+            this.panel2.Location = new System.Drawing.Point(-4, 506);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(787, 18);
             this.panel2.TabIndex = 74;
@@ -263,44 +267,73 @@
             // 
             this.panel1.BackColor = System.Drawing.Color.Sienna;
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel1.Controls.Add(this.pictureBox2);
             this.panel1.Controls.Add(this.label3);
             this.panel1.Location = new System.Drawing.Point(-4, -45);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(787, 96);
+            this.panel1.Size = new System.Drawing.Size(787, 104);
             this.panel1.TabIndex = 73;
             // 
-            // dataGridView1
+            // pictureBox2
             // 
-            this.dataGridView1.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.GridColor = System.Drawing.Color.Peru;
-            this.dataGridView1.Location = new System.Drawing.Point(324, 103);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders;
-            this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView1.Size = new System.Drawing.Size(436, 273);
-            this.dataGridView1.TabIndex = 93;
-            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
+            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
+            this.pictureBox2.Location = new System.Drawing.Point(742, 50);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(40, 44);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox2.TabIndex = 34;
+            this.pictureBox2.TabStop = false;
+            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
+            // 
+            // yolcuka
+            // 
+            this.yolcuka.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.yolcuka.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.yolcuka.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.yolcuka.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.yolcuka.GridColor = System.Drawing.Color.Peru;
+            this.yolcuka.Location = new System.Drawing.Point(283, 135);
+            this.yolcuka.Name = "yolcuka";
+            this.yolcuka.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders;
+            this.yolcuka.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.yolcuka.Size = new System.Drawing.Size(477, 299);
+            this.yolcuka.TabIndex = 93;
+            this.yolcuka.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // button2
             // 
             this.button2.BackColor = System.Drawing.Color.Wheat;
             this.button2.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.button2.Location = new System.Drawing.Point(445, 417);
+            this.button2.Location = new System.Drawing.Point(439, 464);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(97, 36);
             this.button2.TabIndex = 94;
             this.button2.Text = "Sil";
             this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Times New Roman", 20.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.label9.Location = new System.Drawing.Point(454, 101);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(157, 31);
+            this.label9.TabIndex = 95;
+            this.label9.Text = "Yolcu Listesi";
             // 
             // yolculargoster
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(784, 498);
+            this.ClientSize = new System.Drawing.Size(784, 524);
+            this.Controls.Add(this.label9);
             this.Controls.Add(this.button2);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.yolcuka);
             this.Controls.Add(this.cinsiyet);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.yolcuadı);
@@ -325,7 +358,8 @@
             this.Text = "yolculargoster";
             this.Load += new System.EventHandler(this.yolculargoster_Load);
             this.panel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.yolcuka)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -352,7 +386,9 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView yolcuka;
         private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.PictureBox pictureBox2;
     }
 }

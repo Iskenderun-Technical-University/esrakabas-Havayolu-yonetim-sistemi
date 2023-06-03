@@ -45,6 +45,7 @@
             this.label5 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pasaportno = new System.Windows.Forms.TextBox();
             this.yolcuadı = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
@@ -52,6 +53,7 @@
             this.cinsiyet = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // button2
@@ -139,7 +141,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Times New Roman", 24F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.label1.Location = new System.Drawing.Point(244, 98);
+            this.label1.Location = new System.Drawing.Point(247, 89);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(230, 37);
             this.label1.TabIndex = 55;
@@ -186,7 +188,7 @@
             this.label3.BackColor = System.Drawing.Color.Sienna;
             this.label3.Font = new System.Drawing.Font("Tahoma", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label3.Location = new System.Drawing.Point(262, 20);
+            this.label3.Location = new System.Drawing.Point(281, 6);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(287, 52);
             this.label3.TabIndex = 4;
@@ -231,11 +233,23 @@
             // 
             this.panel1.BackColor = System.Drawing.Color.Sienna;
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel1.Controls.Add(this.pictureBox2);
             this.panel1.Controls.Add(this.label3);
             this.panel1.Location = new System.Drawing.Point(-1, 2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(743, 93);
+            this.panel1.Size = new System.Drawing.Size(743, 74);
             this.panel1.TabIndex = 50;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
+            this.pictureBox2.Location = new System.Drawing.Point(690, 6);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(40, 44);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox2.TabIndex = 33;
+            this.pictureBox2.TabStop = false;
+            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
             // 
             // pasaportno
             // 
@@ -271,10 +285,8 @@
             // 
             this.uyruk.FormattingEnabled = true;
             this.uyruk.Items.AddRange(new object[] {
-            "türkiye",
-            "amerika",
             "suudiarabistan",
-            "mısır",
+            "misir",
             "almanya ",
             "ispanya",
             "finlanda",
@@ -327,6 +339,7 @@
             this.Load += new System.EventHandler(this.yolcular_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -355,5 +368,6 @@
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.ComboBox uyruk;
         private System.Windows.Forms.ComboBox cinsiyet;
+        private System.Windows.Forms.PictureBox pictureBox2;
     }
 }

@@ -17,6 +17,7 @@ namespace havayolu_yonetim_sistemi
         SqlConnection con = new SqlConnection();
         SqlCommand cmd = new SqlCommand();
 
+        public object iptalnumara { get; private set; }
 
         public iptal_etme()
         {
@@ -65,7 +66,7 @@ namespace havayolu_yonetim_sistemi
             {
 
                 uçuşnu.Text = dr["uçuşkodu"].ToString();
-            
+
 
             }
 
@@ -90,7 +91,63 @@ namespace havayolu_yonetim_sistemi
         {
 
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            anasayfa an = new anasayfa();
+            an.Show();
+            this.Hide();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            if (iptalnu.Text == " " || uçuşnu.Text == "")
+            {
+                MessageBox.Show("kaybolan veri !!!");
+            }
+            else
+            {
+                try
+                {
+                    con.Open();
+                    String Query = "insert into iptaltbl  values('" + iptalnu.Text + "','" + biletnumara.SelectedValue.ToString() + "','" + uçuşnu.Text + "','" + tarih.Value.ToString() + "')";
+                    SqlCommand cmd = new SqlCommand(Query, con);
+                    cmd.ExecuteNonQuery();
+                    MessageBox.Show("iptal başarıyla kaydeldi!!");
+                    con.Close();
+                    ucuslar();
+
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
+            }
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            iptalnu.Text = " ";
+            biletnumara.Text = " ";
+            uçuşnu.Text = " ";
+
+        }
+
+        private void iptalDGR_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            iptalDGR.AlternatingRowsDefaultCellStyle.BackColor = Color.Sienna;
+            iptalDGR.CellBorderStyle = DataGridViewCellBorderStyle.SingleHorizontal;
+        }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+            DialogResult secim = new DialogResult();
+            if (MessageBox.Show("çıkış yapmak istediğinizde emin misiniz?", "çıkış", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                Application.Exit();
+            }
+        }
     }
-}
+} 
 
 

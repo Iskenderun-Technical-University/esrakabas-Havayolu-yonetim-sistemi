@@ -32,6 +32,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.label3 = new System.Windows.Forms.Label();
             this.button4 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
@@ -42,14 +43,15 @@
             this.label7 = new System.Windows.Forms.Label();
             this.kolsay = new System.Windows.Forms.TextBox();
             this.ukodu = new System.Windows.Forms.TextBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.nereden = new System.Windows.Forms.ComboBox();
+            this.nereye = new System.Windows.Forms.ComboBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.tarihbelirle = new System.Windows.Forms.DateTimePicker();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -78,11 +80,23 @@
             // 
             this.panel1.BackColor = System.Drawing.Color.Sienna;
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel1.Controls.Add(this.pictureBox2);
             this.panel1.Controls.Add(this.label3);
             this.panel1.Location = new System.Drawing.Point(-27, 6);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(740, 87);
             this.panel1.TabIndex = 29;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
+            this.pictureBox2.Location = new System.Drawing.Point(671, 3);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(40, 44);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox2.TabIndex = 32;
+            this.pictureBox2.TabStop = false;
+            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
             // 
             // label3
             // 
@@ -114,7 +128,7 @@
             this.button3.BackColor = System.Drawing.Color.Wheat;
             this.button3.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.button3.Location = new System.Drawing.Point(331, 481);
+            this.button3.Location = new System.Drawing.Point(334, 481);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(97, 36);
             this.button3.TabIndex = 33;
@@ -197,38 +211,36 @@
             this.ukodu.Size = new System.Drawing.Size(189, 27);
             this.ukodu.TabIndex = 43;
             // 
-            // comboBox1
+            // nereden
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
+            this.nereden.FormattingEnabled = true;
+            this.nereden.Items.AddRange(new object[] {
             "suudiarabistan",
-            "mısır",
+            "misir",
             "almanya ",
             "ispanya",
             "finlanda",
             "isviçre"});
-            this.comboBox1.Location = new System.Drawing.Point(196, 250);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(189, 21);
-            this.comboBox1.TabIndex = 44;
+            this.nereden.Location = new System.Drawing.Point(196, 250);
+            this.nereden.Name = "nereden";
+            this.nereden.Size = new System.Drawing.Size(189, 21);
+            this.nereden.TabIndex = 44;
             // 
-            // comboBox2
+            // nereye
             // 
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Items.AddRange(new object[] {
-            "türkiye",
-            "amerika",
+            this.nereye.FormattingEnabled = true;
+            this.nereye.Items.AddRange(new object[] {
             "suudiarabistan",
-            "mısır",
+            "misir",
             "almanya ",
             "ispanya",
             "finlanda",
             "isviçre"});
-            this.comboBox2.Location = new System.Drawing.Point(196, 312);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(189, 21);
-            this.comboBox2.TabIndex = 45;
-            this.comboBox2.SelectedIndexChanged += new System.EventHandler(this.comboBox2_SelectedIndexChanged);
+            this.nereye.Location = new System.Drawing.Point(196, 312);
+            this.nereye.Name = "nereye";
+            this.nereye.Size = new System.Drawing.Size(189, 21);
+            this.nereye.TabIndex = 45;
+            this.nereye.SelectedIndexChanged += new System.EventHandler(this.comboBox2_SelectedIndexChanged);
             // 
             // label4
             // 
@@ -242,12 +254,12 @@
             this.label4.Text = "Tarih Belirle";
             this.label4.UseMnemonic = false;
             // 
-            // dateTimePicker1
+            // tarihbelirle
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(196, 369);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(200, 20);
-            this.dateTimePicker1.TabIndex = 47;
+            this.tarihbelirle.Location = new System.Drawing.Point(196, 369);
+            this.tarihbelirle.Name = "tarihbelirle";
+            this.tarihbelirle.Size = new System.Drawing.Size(200, 20);
+            this.tarihbelirle.TabIndex = 47;
             // 
             // button1
             // 
@@ -282,10 +294,10 @@
             this.ClientSize = new System.Drawing.Size(687, 543);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
-            this.Controls.Add(this.dateTimePicker1);
+            this.Controls.Add(this.tarihbelirle);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.comboBox2);
-            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.nereye);
+            this.Controls.Add(this.nereden);
             this.Controls.Add(this.ukodu);
             this.Controls.Add(this.kolsay);
             this.Controls.Add(this.label7);
@@ -305,6 +317,7 @@
             this.Load += new System.EventHandler(this.uçuşlar_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -325,11 +338,12 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.TextBox kolsay;
         private System.Windows.Forms.TextBox ukodu;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.ComboBox comboBox2;
+        private System.Windows.Forms.ComboBox nereden;
+        private System.Windows.Forms.ComboBox nereye;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.DateTimePicker tarihbelirle;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.PictureBox pictureBox2;
     }
 }

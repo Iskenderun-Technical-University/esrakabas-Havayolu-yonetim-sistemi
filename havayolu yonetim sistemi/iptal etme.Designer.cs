@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(iptal_etme));
             this.label1 = new System.Windows.Forms.Label();
             this.button3 = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
@@ -42,11 +43,13 @@
             this.label4 = new System.Windows.Forms.Label();
             this.iptalnu = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.tarih = new System.Windows.Forms.DateTimePicker();
             this.label7 = new System.Windows.Forms.Label();
             this.uçuşnu = new System.Windows.Forms.TextBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.iptalDGR)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -71,6 +74,7 @@
             this.button3.TabIndex = 125;
             this.button3.Text = "İptal Et";
             this.button3.UseVisualStyleBackColor = false;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // panel2
             // 
@@ -97,6 +101,7 @@
             // 
             this.panel1.BackColor = System.Drawing.Color.Sienna;
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel1.Controls.Add(this.pictureBox2);
             this.panel1.Controls.Add(this.label3);
             this.panel1.Location = new System.Drawing.Point(-2, -12);
             this.panel1.Name = "panel1";
@@ -126,18 +131,27 @@
             this.button2.TabIndex = 139;
             this.button2.Text = "Sıfırla";
             this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // iptalDGR
             // 
+            this.iptalDGR.AllowUserToResizeColumns = false;
+            this.iptalDGR.AllowUserToResizeRows = false;
+            this.iptalDGR.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.iptalDGR.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.iptalDGR.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.iptalDGR.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.iptalDGR.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.iptalDGR.GridColor = System.Drawing.Color.Peru;
             this.iptalDGR.Location = new System.Drawing.Point(41, 315);
             this.iptalDGR.Name = "iptalDGR";
             this.iptalDGR.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders;
             this.iptalDGR.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.iptalDGR.Size = new System.Drawing.Size(548, 208);
+            this.iptalDGR.Size = new System.Drawing.Size(587, 208);
             this.iptalDGR.TabIndex = 138;
+            this.iptalDGR.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.iptalDGR_CellContentClick);
             // 
             // button1
             // 
@@ -150,6 +164,7 @@
             this.button1.TabIndex = 134;
             this.button1.Text = "Önceki";
             this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // biletnumara
             // 
@@ -212,24 +227,24 @@
             this.label6.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.label6.Size = new System.Drawing.Size(130, 29);
             this.label6.TabIndex = 142;
-            this.label6.Text = "Uçuş Numarası";
+            this.label6.Text = "Tarih";
             this.label6.UseMnemonic = false;
             // 
-            // dateTimePicker1
+            // tarih
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(594, 203);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(189, 20);
-            this.dateTimePicker1.TabIndex = 143;
+            this.tarih.Location = new System.Drawing.Point(594, 203);
+            this.tarih.Name = "tarih";
+            this.tarih.Size = new System.Drawing.Size(189, 20);
+            this.tarih.TabIndex = 143;
             // 
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Times New Roman", 24F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Font = new System.Drawing.Font("Times New Roman", 20.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.label7.Location = new System.Drawing.Point(211, 275);
+            this.label7.Location = new System.Drawing.Point(259, 281);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(169, 37);
+            this.label7.Size = new System.Drawing.Size(149, 31);
             this.label7.TabIndex = 144;
             this.label7.Text = "İptal Listesi";
             // 
@@ -243,6 +258,17 @@
             this.uçuşnu.Size = new System.Drawing.Size(189, 27);
             this.uçuşnu.TabIndex = 145;
             // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
+            this.pictureBox2.Location = new System.Drawing.Point(768, 13);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(40, 44);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox2.TabIndex = 32;
+            this.pictureBox2.TabStop = false;
+            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
+            // 
             // iptal_etme
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -250,7 +276,7 @@
             this.ClientSize = new System.Drawing.Size(814, 544);
             this.Controls.Add(this.uçuşnu);
             this.Controls.Add(this.label7);
-            this.Controls.Add(this.dateTimePicker1);
+            this.Controls.Add(this.tarih);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.iptalnu);
             this.Controls.Add(this.label4);
@@ -271,6 +297,7 @@
             this.Load += new System.EventHandler(this.iptal_etme_Load);
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.iptalDGR)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -292,8 +319,9 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox iptalnu;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.DateTimePicker tarih;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.TextBox uçuşnu;
+        private System.Windows.Forms.PictureBox pictureBox2;
     }
 }

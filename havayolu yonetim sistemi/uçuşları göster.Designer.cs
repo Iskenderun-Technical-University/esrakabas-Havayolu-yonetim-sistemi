@@ -28,14 +28,15 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(uçuşları_göster));
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.tarihbelirle = new System.Windows.Forms.DateTimePicker();
             this.label4 = new System.Windows.Forms.Label();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.nereye = new System.Windows.Forms.ComboBox();
+            this.nereden = new System.Windows.Forms.ComboBox();
+            this.ukodu = new System.Windows.Forms.TextBox();
+            this.kolsay = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -45,10 +46,13 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.uçuşka = new System.Windows.Forms.DataGridView();
+            this.label8 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.uçuşka)).BeginInit();
             this.SuspendLayout();
             // 
             // button2
@@ -56,7 +60,7 @@
             this.button2.BackColor = System.Drawing.Color.Wheat;
             this.button2.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.button2.Location = new System.Drawing.Point(521, 431);
+            this.button2.Location = new System.Drawing.Point(521, 462);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(85, 36);
             this.button2.TabIndex = 67;
@@ -69,7 +73,7 @@
             this.button1.BackColor = System.Drawing.Color.Wheat;
             this.button1.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.button1.Location = new System.Drawing.Point(612, 431);
+            this.button1.Location = new System.Drawing.Point(629, 462);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(97, 36);
             this.button1.TabIndex = 66;
@@ -77,12 +81,12 @@
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // dateTimePicker1
+            // tarihbelirle
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(12, 337);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(200, 20);
-            this.dateTimePicker1.TabIndex = 65;
+            this.tarihbelirle.Location = new System.Drawing.Point(12, 337);
+            this.tarihbelirle.Name = "tarihbelirle";
+            this.tarihbelirle.Size = new System.Drawing.Size(200, 20);
+            this.tarihbelirle.TabIndex = 65;
             // 
             // label4
             // 
@@ -96,57 +100,53 @@
             this.label4.Text = "Tarih Belirle";
             this.label4.UseMnemonic = false;
             // 
-            // comboBox2
+            // nereye
             // 
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Items.AddRange(new object[] {
-            "türkiye",
-            "amerika",
+            this.nereye.FormattingEnabled = true;
+            this.nereye.Items.AddRange(new object[] {
             "suudiarabistan",
-            "mısır",
+            "misir",
             "almanya ",
             "ispanya",
             "finlanda",
             "isviçre"});
-            this.comboBox2.Location = new System.Drawing.Point(12, 266);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(189, 21);
-            this.comboBox2.TabIndex = 63;
+            this.nereye.Location = new System.Drawing.Point(12, 266);
+            this.nereye.Name = "nereye";
+            this.nereye.Size = new System.Drawing.Size(189, 21);
+            this.nereye.TabIndex = 63;
             // 
-            // comboBox1
+            // nereden
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
-            "türkiye",
-            "amerika",
+            this.nereden.FormattingEnabled = true;
+            this.nereden.Items.AddRange(new object[] {
             "suudiarabistan",
-            "mısır",
+            "misir",
             "almanya ",
             "ispanya",
             "finlanda",
             "isviçre"});
-            this.comboBox1.Location = new System.Drawing.Point(12, 197);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(189, 21);
-            this.comboBox1.TabIndex = 62;
+            this.nereden.Location = new System.Drawing.Point(12, 197);
+            this.nereden.Name = "nereden";
+            this.nereden.Size = new System.Drawing.Size(189, 21);
+            this.nereden.TabIndex = 62;
             // 
-            // textBox2
+            // ukodu
             // 
-            this.textBox2.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.Location = new System.Drawing.Point(12, 135);
-            this.textBox2.Multiline = true;
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(189, 27);
-            this.textBox2.TabIndex = 61;
+            this.ukodu.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ukodu.Location = new System.Drawing.Point(12, 135);
+            this.ukodu.Multiline = true;
+            this.ukodu.Name = "ukodu";
+            this.ukodu.Size = new System.Drawing.Size(189, 27);
+            this.ukodu.TabIndex = 61;
             // 
-            // textBox1
+            // kolsay
             // 
-            this.textBox1.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(12, 402);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(189, 27);
-            this.textBox1.TabIndex = 60;
+            this.kolsay.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.kolsay.Location = new System.Drawing.Point(12, 402);
+            this.kolsay.Multiline = true;
+            this.kolsay.Name = "kolsay";
+            this.kolsay.Size = new System.Drawing.Size(189, 27);
+            this.kolsay.TabIndex = 60;
             // 
             // label7
             // 
@@ -189,7 +189,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Times New Roman", 24F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.label1.Location = new System.Drawing.Point(286, 46);
+            this.label1.Location = new System.Drawing.Point(257, 57);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(226, 37);
             this.label1.TabIndex = 55;
@@ -200,7 +200,7 @@
             this.button4.BackColor = System.Drawing.Color.Wheat;
             this.button4.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.button4.Location = new System.Drawing.Point(401, 431);
+            this.button4.Location = new System.Drawing.Point(401, 462);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(97, 36);
             this.button4.TabIndex = 53;
@@ -213,7 +213,7 @@
             this.button3.BackColor = System.Drawing.Color.Wheat;
             this.button3.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.button3.Location = new System.Drawing.Point(273, 431);
+            this.button3.Location = new System.Drawing.Point(273, 462);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(97, 36);
             this.button3.TabIndex = 52;
@@ -226,9 +226,9 @@
             this.label3.BackColor = System.Drawing.Color.Sienna;
             this.label3.Font = new System.Drawing.Font("Tahoma", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label3.Location = new System.Drawing.Point(292, 37);
+            this.label3.Location = new System.Drawing.Point(295, 44);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(287, 52);
+            this.label3.Size = new System.Drawing.Size(176, 52);
             this.label3.TabIndex = 4;
             this.label3.Text = "ŞAFAKJET";
             this.label3.UseCompatibleTextRendering = true;
@@ -249,48 +249,76 @@
             // 
             this.panel1.BackColor = System.Drawing.Color.Sienna;
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel1.Controls.Add(this.pictureBox2);
             this.panel1.Controls.Add(this.label3);
             this.panel1.Location = new System.Drawing.Point(-4, -44);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(749, 87);
+            this.panel1.Size = new System.Drawing.Size(749, 98);
             this.panel1.TabIndex = 50;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
+            this.pictureBox2.Location = new System.Drawing.Point(704, 44);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(40, 44);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox2.TabIndex = 32;
+            this.pictureBox2.TabStop = false;
+            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
             // 
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.Sienna;
             this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel2.Location = new System.Drawing.Point(-4, 473);
+            this.panel2.Location = new System.Drawing.Point(-4, 504);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(774, 22);
             this.panel2.TabIndex = 51;
             // 
-            // dataGridView1
+            // uçuşka
             // 
-            this.dataGridView1.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.GridColor = System.Drawing.Color.Peru;
-            this.dataGridView1.Location = new System.Drawing.Point(273, 126);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders;
-            this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView1.Size = new System.Drawing.Size(436, 273);
-            this.dataGridView1.TabIndex = 68;
-            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
+            this.uçuşka.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.uçuşka.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.uçuşka.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.uçuşka.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.uçuşka.GridColor = System.Drawing.Color.Peru;
+            this.uçuşka.Location = new System.Drawing.Point(273, 141);
+            this.uçuşka.Name = "uçuşka";
+            this.uçuşka.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders;
+            this.uçuşka.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.uçuşka.Size = new System.Drawing.Size(453, 315);
+            this.uçuşka.TabIndex = 68;
+            this.uçuşka.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Times New Roman", 20.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.label8.Location = new System.Drawing.Point(436, 107);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(153, 31);
+            this.label8.TabIndex = 69;
+            this.label8.Text = "Uçuş Listesi";
             // 
             // uçuşları_göster
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(757, 496);
-            this.Controls.Add(this.dataGridView1);
+            this.ClientSize = new System.Drawing.Size(757, 538);
+            this.Controls.Add(this.label8);
+            this.Controls.Add(this.uçuşka);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
-            this.Controls.Add(this.dateTimePicker1);
+            this.Controls.Add(this.tarihbelirle);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.comboBox2);
-            this.Controls.Add(this.comboBox1);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.nereye);
+            this.Controls.Add(this.nereden);
+            this.Controls.Add(this.ukodu);
+            this.Controls.Add(this.kolsay);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label2);
@@ -302,10 +330,12 @@
             this.Controls.Add(this.panel2);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "uçuşları_göster";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "uçuşları_göster";
             this.Load += new System.EventHandler(this.uçuşları_göster_Load);
             this.panel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.uçuşka)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -315,12 +345,12 @@
 
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.DateTimePicker tarihbelirle;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.ComboBox comboBox2;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.ComboBox nereye;
+        private System.Windows.Forms.ComboBox nereden;
+        private System.Windows.Forms.TextBox ukodu;
+        private System.Windows.Forms.TextBox kolsay;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label2;
@@ -331,6 +361,8 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView uçuşka;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.PictureBox pictureBox2;
     }
 }

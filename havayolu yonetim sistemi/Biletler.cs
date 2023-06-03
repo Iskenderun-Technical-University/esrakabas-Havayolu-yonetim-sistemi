@@ -132,8 +132,8 @@ namespace havayolu_yonetim_sistemi
 
         private void button1_Click(object sender, EventArgs e)
         {
-            yolculargoster gos = new yolculargoster();
-            gos.Show();
+            anasayfa an = new anasayfa();
+            an.Show();
             this.Hide();
         }
 
@@ -149,7 +149,7 @@ namespace havayolu_yonetim_sistemi
 
         private void button3_Click(object sender, EventArgs e)
         {
-            if (biletno.Text == " " ||bağaj.Text == "" || yas.Text == " ")
+            if (biletno.Text == " " || bağaj.Text == "" || yas.Text == " ")
             {
                 MessageBox.Show("kaybolan veri !!!");
             }
@@ -158,7 +158,7 @@ namespace havayolu_yonetim_sistemi
                 try
                 {
                     con.Open();
-                    String Query = "insert into bilettbl  values('" + biletno.Text + "','" + uçuşnu.SelectedValue.ToString() + "','" + yolcutc.SelectedValue.ToString() + "','" + yolcuad.Text + "','" + pasaportno.Text + "','"   + yolcuuyruk.Text + "','" + yas.Text + "','" + bağaj.Text + "')";
+                    String Query = "insert into bilettbl  values('" + biletno.Text + "','" + uçuşnu.SelectedValue.ToString() + "','" + yolcutc.SelectedValue.ToString() + "','" + yolcuad.Text + "','" + pasaportno.Text + "','" + yolcuuyruk.Text + "','" + yas.Text + "','" + bağaj.Text + "')";
                     SqlCommand cmd = new SqlCommand(Query, con);
                     cmd.ExecuteNonQuery();
                     MessageBox.Show("bilet başarıyla kaydeldi!!");
@@ -173,6 +173,19 @@ namespace havayolu_yonetim_sistemi
             }
         }
 
-       
+        private void biletDGV_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            biletDGV.AlternatingRowsDefaultCellStyle.BackColor = Color.Sienna;
+            biletDGV.CellBorderStyle = DataGridViewCellBorderStyle.SingleHorizontal;
+        }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+            DialogResult secim = new DialogResult();
+            if (MessageBox.Show("çıkış yapmak istediğinizde emin misiniz?", "çıkış", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                Application.Exit();
+            }
+        }
     }
 }

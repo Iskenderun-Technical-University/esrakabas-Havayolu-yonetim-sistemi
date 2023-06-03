@@ -87,8 +87,10 @@ namespace havayolu_yonetim_sistemi
         private void button2_Click(object sender, EventArgs e)
         {
             DialogResult secim = new DialogResult();
-            secim = MessageBox.Show("çıkış yapmak istediğinizde emin misiniz?", "çıkış", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-            Application.Exit();
+           if(  MessageBox.Show("çıkış yapmak istediğinizde emin misiniz?", "çıkış", MessageBoxButtons.YesNo, MessageBoxIcon.Question)==DialogResult.Yes)
+            {
+                Application.Exit();
+            }
         }
     }
 }

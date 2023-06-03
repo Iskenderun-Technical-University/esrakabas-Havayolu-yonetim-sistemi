@@ -17,7 +17,7 @@ namespace havayolu_yonetim_sistemi
         SqlCommand cmd = new SqlCommand();
 
         public uçuşlar()
-        {           
+        {
             //veritabanina bağlama
 
             InitializeComponent();
@@ -40,7 +40,7 @@ namespace havayolu_yonetim_sistemi
         {
             //kaydet botunu kodlamasi
 
-            if (ukodu.Text == " " || comboBox1.Text == " " || comboBox2.Text == " " || dateTimePicker1.Text == " "||kolsay.Text=="")
+            if (ukodu.Text == " " || nereden.Text == " " || nereye.Text == " " || tarihbelirle.Text == " " || kolsay.Text == "")
             {
                 MessageBox.Show("kaybolan veri !!!");
             }
@@ -50,15 +50,15 @@ namespace havayolu_yonetim_sistemi
                 {
                     con.Open();
 
-                    String Query = "insert into uçuşlar  values('" + ukodu.Text+"','"+comboBox1.SelectedItem.ToString()+"','"+comboBox2.SelectedItem.ToString()+"','"+dateTimePicker1.Value.ToString()+"','"+kolsay.Text+"')";
-                    
-                    SqlCommand cmd = new SqlCommand(Query,con);
+                    String Query = "insert into uçuşlar  values('" + ukodu.Text + "','" + nereden.SelectedItem.ToString() + "','" + nereye.SelectedItem.ToString() + "','" + tarihbelirle.Value.ToString() + "','" + kolsay.Text + "')";
+
+                    SqlCommand cmd = new SqlCommand(Query, con);
                     cmd.ExecuteNonQuery();
                     MessageBox.Show("uçuş başarıyla kaydeldi!!");
                     con.Close();
 
                 }
-                catch(Exception ex)
+                catch (Exception ex)
                 {
                     MessageBox.Show(ex.Message);
                 }
@@ -75,8 +75,8 @@ namespace havayolu_yonetim_sistemi
         private void button4_Click(object sender, EventArgs e)
         {
             ukodu.Text = " ";
-            comboBox1.SelectedItem = " ";
-            comboBox2.SelectedItem = " ";
+            nereden.Text = " ";
+            nereye.Text = " ";
             kolsay.Text = " ";
         }
 
@@ -90,6 +90,15 @@ namespace havayolu_yonetim_sistemi
         private void uçuşlar_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+            DialogResult secim = new DialogResult();
+            if (MessageBox.Show("çıkış yapmak istediğinizde emin misiniz?", "çıkış", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                Application.Exit();
+            }
         }
     }
 }

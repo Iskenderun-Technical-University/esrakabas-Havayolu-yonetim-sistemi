@@ -56,20 +56,38 @@ namespace havayolu_yonetim_sistemi
 
         private void button1_Click(object sender, EventArgs e)
         {
-
+            iptal_etme ip = new iptal_etme();
+            ip.Show();
+            this.Hide();
         }
-
+        
         private void button2_Click(object sender, EventArgs e)
         {
-
+            Biletler lit = new Biletler();
+            lit.Show();
+            this.Hide();
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
-
+            yolcular loc = new yolcular();
+            loc.Show();
+            this.Hide();
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            DialogResult secim = new DialogResult();
+            secim = MessageBox.Show("çıkış yapmak istediğinizde emin misiniz?", "çıkış", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            Application.Exit();
+        }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
         {
 
         }
